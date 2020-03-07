@@ -172,6 +172,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3970189911095186088, guid: 56e1953df25cd32469f8512d6eca500a,
+        type: 3}
+      propertyPath: m_TargetEye
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3970189911095186088, guid: 56e1953df25cd32469f8512d6eca500a,
+        type: 3}
+      propertyPath: m_projectionMatrixMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3970189911095186088, guid: 56e1953df25cd32469f8512d6eca500a,
+        type: 3}
+      propertyPath: orthographic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5061009830845507828, guid: 56e1953df25cd32469f8512d6eca500a,
         type: 3}
       propertyPath: m_Name
