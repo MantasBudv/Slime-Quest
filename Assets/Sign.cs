@@ -21,7 +21,7 @@ public class Sign : MonoBehaviour
         if(Input.GetButtonDown("Interact") && PlayerInRange)
         {
             Debug.Log(dialogBox.transform.position);
-            if (dialogBox.transform.position.y == 43)
+            if(manager.animator.GetBool("isopen"))
             {
                 manager.DisplayNextSentence();
             }
