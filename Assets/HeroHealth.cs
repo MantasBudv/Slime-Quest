@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class HeroHealth : MonoBehaviour
 {
-    public int maxHealth = 5;
-    public int currentHealth;
-    public float regenerationTime = 30f;
+    static public int maxHealth = 5;
+    static public int currentHealth;
+    static public float regenerationTime = 30f;
 
     public HealthBar healthBar;
 
