@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 3558865679735463134}
   - component: {fileID: 6109613385319997763}
   - component: {fileID: 6213954934438597090}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Mole
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,7 +121,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1.5
+  m_LinearDrag: 0.75
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -240,6 +240,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MoleGFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 5475465346601348618, guid: 8d63182dcd72701449993acefd315c70,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5641165222291706908, guid: 8d63182dcd72701449993acefd315c70,
         type: 3}

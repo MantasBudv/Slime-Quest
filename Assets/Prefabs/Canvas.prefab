@@ -268,7 +268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f4856c6b70eed24ba3c0cb018113d3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Inventory: {fileID: 6276394294126655323}
+  InventoryTab: {fileID: 6276394294126655323}
+  itemsParent: {fileID: 6276394294749817995}
 --- !u!114 &3739000148278860306
 MonoBehaviour:
   m_ObjectHideFlags: 0
