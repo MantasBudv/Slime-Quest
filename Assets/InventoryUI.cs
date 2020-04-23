@@ -6,12 +6,20 @@ public class InventoryUI : MonoBehaviour
 {
     public static bool InventoryIsOpen = false;
 
-    public GameObject Inventory;
+    public GameObject InventoryTab;
+
+    Inventory inventory;
+
+    public Transform itemsParent;
+
+    InventorySlot[] slots;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        inventory = Inventory.instance;
+        inventory.onItemChangedCallback += UpdateUI;
+        slots = itemsParent.GetComponentsInChildren<InventorySlot>();
     }
 
     // Update is called once per frame
@@ -34,10 +42,25 @@ public class InventoryUI : MonoBehaviour
 
     void OpenInventory()
     {
-        Inventory.SetActive(true);
+        InventoryTab.SetActive(true);
     }
     void CloseInventory()
     {
-        Inventory.SetActive(false);
+        InventoryTab.SetActive(false);
+    }
+
+    void UpdateUI ()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (i < inventory.GetItems().Count)
+            {
+                slots[i].AddItem(inventory.GetItems()[i]);
+            }
+            else
+            {
+                slots[i].ClearSlot();
+            }
+        }
     }
 }
