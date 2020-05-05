@@ -22,6 +22,7 @@ public class HeroHealth : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1f;
+        PlayerMovement.frozen = false;
         OverText.SetActive(false);
         RestartButton.SetActive(false);
 
@@ -74,6 +75,7 @@ public class HeroHealth : MonoBehaviour
         OverText.SetActive(true);
         RestartButton.SetActive(true);
         Time.timeScale = 0f;
+        PlayerMovement.frozen = true;
 
     }
 

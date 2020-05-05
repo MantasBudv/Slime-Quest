@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
 
     public Animator animator;
+    static public bool frozen = false;
 
     Vector2 movement;
 
@@ -18,23 +19,25 @@ public class PlayerMovement : MonoBehaviour
         //input
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-
-        animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("Vertical", movement.y);
-        animator.SetFloat("Speed", movement.sqrMagnitude);
-
-        if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0 )
+        if (!frozen)
         {
-            animator.SetFloat("LastMoveX", Input.GetAxisRaw("Horizontal"));
-            animator.SetFloat("LastMoveY", Input.GetAxisRaw("Vertical"));
-        }
+            animator.SetFloat("Horizontal", movement.x);
+            animator.SetFloat("Vertical", movement.y);
+            animator.SetFloat("Speed", movement.sqrMagnitude);
 
+            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+            {
+                animator.SetFloat("LastMoveX", Input.GetAxisRaw("Horizontal"));
+                animator.SetFloat("LastMoveY", Input.GetAxisRaw("Vertical"));
+            }
+        }
     }
 
     private void FixedUpdate()
     {
         //movement
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+
     }
 
 }
