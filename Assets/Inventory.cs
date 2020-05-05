@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Inventory : MonoBehaviour
 {
@@ -26,10 +27,15 @@ public class Inventory : MonoBehaviour
 
     public static List<Item> items = new List<Item>();
 
-    void Start()
+    private static Scene newScene;
+
+    void Update()
     {
-        if (onItemChangedCallback != null)
+        if (onItemChangedCallback != null && !newScene.Equals(SceneManager.GetActiveScene()))
+        {
+            newScene = SceneManager.GetActiveScene();
             onItemChangedCallback.Invoke();
+        }
     }
     public bool Add (Item item)
     {
