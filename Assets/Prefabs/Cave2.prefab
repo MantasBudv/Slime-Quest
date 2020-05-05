@@ -2247,6 +2247,8 @@ GameObject:
   - component: {fileID: 5044401049659818445}
   - component: {fileID: 3780213354475338663}
   - component: {fileID: 3818311267949246501}
+  - component: {fileID: 5407421084514252472}
+  - component: {fileID: 5407421084514252473}
   m_Layer: 0
   m_Name: HiddenRoad
   m_TagString: Untagged
@@ -2478,6 +2480,36 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!19719996 &5407421084514252472
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2352349956533572494}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+--- !u!114 &5407421084514252473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2352349956533572494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b38bd8019a9a7d478383f684d7c84a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hidden: {fileID: 2352349956533572494}
+  Open: {fileID: 4493588318914085572}
 --- !u!1 &4493588318914085572
 GameObject:
   m_ObjectHideFlags: 0
@@ -2697,6 +2729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6315567899136110426}
   - component: {fileID: 8975473585319333874}
+  - component: {fileID: 589511853319585273}
   m_Layer: 0
   m_Name: Cave2
   m_TagString: Untagged
@@ -2735,6 +2768,42 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!60 &589511853319585273
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4577815013163538713}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 10.295454, y: 8.919579}
+      - {x: -13.790819, y: 8.681658}
+      - {x: -13.802432, y: -11.695017}
+      - {x: -6.095518, y: -11.895094}
+      - {x: -5.908513, y: -15.708141}
+      - {x: 4.1885004, y: -15.57225}
+      - {x: 4.2034426, y: -22.691036}
+      - {x: 26.586826, y: -22.688381}
+      - {x: 26.60158, y: -12.736531}
+      - {x: 33.74627, y: -12.713459}
+      - {x: 33.86131, y: 8.844564}
 --- !u!1 &6898411214777796663
 GameObject:
   m_ObjectHideFlags: 0
@@ -13354,7 +13423,7 @@ Tilemap:
   - m_RefCount: 44
     m_Data: {fileID: 5018036542217069276, guid: 8b6171c813742294aa7ab7b62f49ccb2,
       type: 3}
-  - m_RefCount: 839
+  - m_RefCount: 859
     m_Data: {fileID: 8331919018374403968, guid: 8b6171c813742294aa7ab7b62f49ccb2,
       type: 3}
   - m_RefCount: 0
@@ -13373,7 +13442,7 @@ Tilemap:
       type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 72754580961212127, guid: 8b6171c813742294aa7ab7b62f49ccb2, type: 3}
-  - m_RefCount: 140
+  - m_RefCount: 142
     m_Data: {fileID: 2847686527114060130, guid: 8b6171c813742294aa7ab7b62f49ccb2,
       type: 3}
   m_TileMatrixArray:
