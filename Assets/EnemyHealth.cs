@@ -10,6 +10,7 @@ public class EnemyHealth : MonoBehaviour
     public Rigidbody2D rb;
 
     public HealthBar healthBar;
+    public GameObject GooPref;
 
     public GameObject HP;
     void Start()
@@ -52,6 +53,7 @@ public class EnemyHealth : MonoBehaviour
     void Die ()
     {
         Destroy(gameObject);
-        //DropItem--
+        GameObject goo = Instantiate(GooPref, rb.position, Quaternion.Euler(Vector3.zero));
+        goo.GetComponent<GooScript>().TranformIndex = 1;
     }
 }

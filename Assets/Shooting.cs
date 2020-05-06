@@ -15,7 +15,7 @@ public class Shooting : MonoBehaviour
     {
         if (!PlayerMovement.frozen)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if ((Input.GetButtonDown("Fire1")) && (Shapeshifting.CurrentForm == 0))
             {
                 Shoot();
                 FindObjectOfType<AudioManager>().Play("BlobAttack");
