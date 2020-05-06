@@ -318,12 +318,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 9126458135806874138}
   m_PrefabAsset: {fileID: 0}
---- !u!20 &1657312228 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 1345718988681906684, guid: 30b09f2a0961e934397c1ffa24f6b31c,
-    type: 3}
-  m_PrefabInstance: {fileID: 9126458135806874138}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9126458135806874138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -331,6 +325,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 729336532692232996, guid: 30b09f2a0961e934397c1ffa24f6b31c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -410.97787
+      objectReference: {fileID: 0}
+    - target: {fileID: 729336532692232996, guid: 30b09f2a0961e934397c1ffa24f6b31c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -210.31197
+      objectReference: {fileID: 0}
     - target: {fileID: 1345718988681906684, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
       propertyPath: m_projectionMatrixMode
@@ -344,23 +348,18 @@ PrefabInstance:
     - target: {fileID: 4168437031276681251, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.0367928
+      value: -1.2578773
       objectReference: {fileID: 0}
     - target: {fileID: 4168437031276681251, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.18341827
+      value: -0.18190002
       objectReference: {fileID: 0}
-    - target: {fileID: 4287920238114359130, guid: 30b09f2a0961e934397c1ffa24f6b31c,
+    - target: {fileID: 8724521815149827258, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
-      propertyPath: cam
+      propertyPath: m_BoundingShape2D
       value: 
-      objectReference: {fileID: 1657312228}
-    - target: {fileID: 5314040725366268723, guid: 30b09f2a0961e934397c1ffa24f6b31c,
-        type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 1657312228}
+      objectReference: {fileID: 504315334}
     - target: {fileID: 9126458135913512431, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -435,11 +434,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9126458137061536799, guid: 30b09f2a0961e934397c1ffa24f6b31c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30b09f2a0961e934397c1ffa24f6b31c, type: 3}
