@@ -9,11 +9,13 @@ public class VolumeController : MonoBehaviour
 {
     public Slider slider;
 
-    public static float volume = 40;
-        // Start is called before the first frame update
-        void Start()
+    public static float volume;
+
+    void Start()
     {
-        slider.maxValue = 100;
+        volume = FindObjectOfType<AudioManager>().GetVolume();
+        Debug.Log(volume);
+        slider.maxValue = 1;
         slider.value = volume;
     }
 
@@ -23,6 +25,7 @@ public class VolumeController : MonoBehaviour
         if (slider.value != volume)
         {
             volume = slider.value;
+            FindObjectOfType<AudioManager>().SetVolume(slider.value);
         }
     }
 }
