@@ -18,7 +18,7 @@ public class Shooting : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 Shoot();
-
+                FindObjectOfType<AudioManager>().Play("BlobAttack");
             }
         }
     }

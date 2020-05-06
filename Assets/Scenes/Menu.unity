@@ -1198,6 +1198,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 541322c1655f06841840e54699b7d6a6, type: 3}
+--- !u!1001 &1400069395
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4276844682006722938, guid: d46e6a1b8d575a04383229575449ffbf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.006873
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276844682006722938, guid: d46e6a1b8d575a04383229575449ffbf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.004531
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276844682006722938, guid: d46e6a1b8d575a04383229575449ffbf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.0585938
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276844682006722938, guid: d46e6a1b8d575a04383229575449ffbf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276844682006722938, guid: d46e6a1b8d575a04383229575449ffbf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276844682006722938, guid: d46e6a1b8d575a04383229575449ffbf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276844682006722938, guid: d46e6a1b8d575a04383229575449ffbf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276844682006722938, guid: d46e6a1b8d575a04383229575449ffbf,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276844682006722938, guid: d46e6a1b8d575a04383229575449ffbf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276844682006722938, guid: d46e6a1b8d575a04383229575449ffbf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276844682006722938, guid: d46e6a1b8d575a04383229575449ffbf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221160347351711849, guid: d46e6a1b8d575a04383229575449ffbf,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d46e6a1b8d575a04383229575449ffbf, type: 3}
 --- !u!224 &1533105971 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1277418498084679793, guid: 1123c817d95942544a743b083c266329,
@@ -1300,7 +1369,7 @@ RectTransform:
   - {fileID: 1966968883}
   - {fileID: 480647520}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1679,7 +1748,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &813571847988187465
 PrefabInstance:
@@ -1812,6 +1881,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolumeSlider
       objectReference: {fileID: 0}
+    - target: {fileID: 3125537267698185166, guid: 4da7b5091d94f9641a18bb5e7c23f13b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3125537267698185167, guid: 4da7b5091d94f9641a18bb5e7c23f13b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1915,6 +1989,11 @@ PrefabInstance:
     - target: {fileID: 3125537267698185167, guid: 4da7b5091d94f9641a18bb5e7c23f13b,
         type: 3}
       propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3125537267698185200, guid: 4da7b5091d94f9641a18bb5e7c23f13b,
+        type: 3}
+      propertyPath: m_Value
       value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
