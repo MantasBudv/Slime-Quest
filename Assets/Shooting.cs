@@ -8,6 +8,8 @@ public class Shooting : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPref;
 
+    public HeroHealth heroHealth;
+
     public float bulletForce = 20f;
 
     float FireRate = 0.3f;
@@ -33,5 +35,6 @@ public class Shooting : MonoBehaviour
         GameObject bullet = Instantiate(bulletPref, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+        heroHealth.TakeDamage();
     }
 }

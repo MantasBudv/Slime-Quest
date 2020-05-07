@@ -6,7 +6,7 @@ public class HeroHealth : MonoBehaviour
 {
     static public int maxHealth = 5;
     static public int currentHealth;
-    static public float regenerationTime = 30f;
+    static public float regenerationTime = 3f;
     public GameObject OverText;
     public GameObject RestartButton;
 
@@ -14,7 +14,6 @@ public class HeroHealth : MonoBehaviour
 
     public float KnockDur;
     public float KnockPwr;
-
 
     public HealthBar healthBar;
 
@@ -29,7 +28,7 @@ public class HeroHealth : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.setMaxHealth(maxHealth);
 
-        InvokeRepeating("Regenerate", 30.0f, 30.0f);
+        InvokeRepeating("Regenerate", regenerationTime, regenerationTime);
     }
 
     // Update is called once per frame
@@ -55,19 +54,23 @@ public class HeroHealth : MonoBehaviour
 
     }
 
-    void TakeDamage()
+    public void TakeDamage()
     {
-        currentHealth--;
-        healthBar.setHealth(currentHealth);
+        setHealth(--currentHealth);
     }
 
     void Regenerate()
     {
         if (currentHealth != maxHealth)
         {
-            currentHealth++;
-            healthBar.setHealth(currentHealth);
+            setHealth(++currentHealth);
         }
+    }
+
+    void setHealth(int hp)
+    {
+        healthBar.setHealth(hp);
+        currentHealth = hp;
     }
 
     void GameOver()
@@ -76,7 +79,6 @@ public class HeroHealth : MonoBehaviour
         RestartButton.SetActive(true);
         Time.timeScale = 0f;
         PlayerMovement.frozen = true;
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
