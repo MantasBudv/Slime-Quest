@@ -3033,6 +3033,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 75.7
       objectReference: {fileID: 0}
+    - target: {fileID: 8848500206945600554, guid: 3a4e1ed46f51e3147a0d6e9dd4e10bab,
+        type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8848500206945600555, guid: 3a4e1ed46f51e3147a0d6e9dd4e10bab,
         type: 3}
       propertyPath: m_FontData.m_Font
@@ -3052,7 +3057,27 @@ PrefabInstance:
     - target: {fileID: 8848500206945600555, guid: 3a4e1ed46f51e3147a0d6e9dd4e10bab,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.09411765
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8848500206945600555, guid: 3a4e1ed46f51e3147a0d6e9dd4e10bab,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.85882354
+      objectReference: {fileID: 0}
+    - target: {fileID: 8848500206945600555, guid: 3a4e1ed46f51e3147a0d6e9dd4e10bab,
+        type: 3}
+      propertyPath: m_FontData.m_RichText
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8848500206945600555, guid: 3a4e1ed46f51e3147a0d6e9dd4e10bab,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8848500206945600555, guid: 3a4e1ed46f51e3147a0d6e9dd4e10bab,
+        type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8848500208857477373, guid: 3a4e1ed46f51e3147a0d6e9dd4e10bab,
         type: 3}

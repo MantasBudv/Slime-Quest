@@ -218,6 +218,14 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 629791970, guid: 0b6cb681fd6fccb4c9eadd3f6b901044, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 629791970, guid: 0b6cb681fd6fccb4c9eadd3f6b901044, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 734631461, guid: 0b6cb681fd6fccb4c9eadd3f6b901044, type: 3}
       propertyPath: dialogBox
       value: 
@@ -565,12 +573,12 @@ PrefabInstance:
     - target: {fileID: 4168437031276681251, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.2272682
+      value: -4.630245
       objectReference: {fileID: 0}
     - target: {fileID: 4168437031276681251, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1829834
+      value: -0.18375778
       objectReference: {fileID: 0}
     - target: {fileID: 8724521815149827258, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
