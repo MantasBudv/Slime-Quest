@@ -10,13 +10,18 @@ public class Shooting : MonoBehaviour
 
     public float bulletForce = 20f;
 
+    float FireRate = 0.3f;
+    float NextFire;
+
+
     // Update is called once per frame
     void Update()
     {
         if (!PlayerMovement.frozen)
         {
-            if ((Input.GetButtonDown("Fire1")) && (Shapeshifting.CurrentForm == 0))
+            if ((Input.GetButtonDown("Fire1")) && (Shapeshifting.CurrentForm == 0) && Time.time > NextFire)
             {
+                NextFire = Time.time + FireRate;
                 Shoot();
                 FindObjectOfType<AudioManager>().Play("BlobAttack");
             }
