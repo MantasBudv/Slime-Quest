@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: cfa4da7de130a0540923b9c0d1544612
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Rounds Black
+  fontNames:
+  - Rounds Black
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3ec22532e2571d44abe84e54ffe7ca4d, type: 3}
+  - {fileID: 12800000, guid: 1976b9555dedee34dac19579f6ab967c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
