@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HeroHealth : MonoBehaviour
 {
     static public int maxHealth = 5;
-    static public int currentHealth;
+    static public int currentHealth = maxHealth;
     static public float regenerationTime = 3f;
     public GameObject OverText;
     public GameObject RestartButton;
@@ -17,6 +18,8 @@ public class HeroHealth : MonoBehaviour
 
     public HealthBar healthBar;
 
+    private static Scene newScene;
+
     public GameObject HP;
     void Start()
     {
@@ -24,8 +27,8 @@ public class HeroHealth : MonoBehaviour
         PlayerMovement.frozen = false;
         OverText.SetActive(false);
         RestartButton.SetActive(false);
-
-        currentHealth = maxHealth;
+        //currentHealth = maxHealth;
+        setHealth(currentHealth);
         healthBar.setMaxHealth(maxHealth);
 
         InvokeRepeating("Regenerate", regenerationTime, regenerationTime);
@@ -34,24 +37,24 @@ public class HeroHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage();
-        }
-        if (currentHealth == maxHealth)
-        {
-            HP.SetActive(false);
-        }
-        else HP.SetActive(true);
-        if (currentHealth == 0)
-        {
-            GameOver();
-        }
-    }
-
-    void UpdateEverySecond()
-    {
-
+            if (!newScene.Equals(SceneManager.GetActiveScene()))
+            {
+                newScene = SceneManager.GetActiveScene();
+                if (currentHealth != maxHealth)
+                {
+                    healthBar.setHealth(currentHealth);
+                }
+            }
+            if (currentHealth == maxHealth)
+            {
+                if (HP.activeInHierarchy == true)
+                    HP.SetActive(false);
+            }
+            else HP.SetActive(true);
+            if (currentHealth == 0)
+            {
+                GameOver();
+            }
     }
 
     public void TakeDamage()
@@ -79,6 +82,7 @@ public class HeroHealth : MonoBehaviour
         RestartButton.SetActive(true);
         Time.timeScale = 0f;
         PlayerMovement.frozen = true;
+        currentHealth = maxHealth;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

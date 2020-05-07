@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67e0202fd9d3fdb40a6e68308f39c10c, type: 3}
-  m_Name: Hearth
+  m_Name: Heart
   m_EditorClassIdentifier: 
-  name: Hearth
+  name: Heart
   icon: {fileID: 21300000, guid: 7b82a1d84a42e8248a782655062750e1, type: 3}
-  isDefaultItem: 0
+  isStackable: 0
+  stackCount: 0
+  maxStack: 0
