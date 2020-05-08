@@ -26,10 +26,11 @@ public class Shapeshifting : MonoBehaviour
         Renderer = GetComponent<SpriteRenderer>();
     }
 
+
     // Update is called once per frame
     void Update()
     {
-        if (!newScene.Equals(SceneManager.GetActiveScene()))
+        if (!newScene.Equals(SceneManager.GetActiveScene()))   
         {
             newScene = SceneManager.GetActiveScene();
             if (CurrentForm != 0)
