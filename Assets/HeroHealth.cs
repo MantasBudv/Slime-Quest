@@ -27,9 +27,7 @@ public class HeroHealth : MonoBehaviour
         PlayerMovement.frozen = false;
         OverText.SetActive(false);
         RestartButton.SetActive(false);
-        //currentHealth = maxHealth;
         setHealth(currentHealth);
-        healthBar.setMaxHealth(maxHealth);
 
         InvokeRepeating("Regenerate", regenerationTime, regenerationTime);
     }
@@ -37,6 +35,11 @@ public class HeroHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+            if (healthBar.slider.maxValue != maxHealth)
+            {
+                healthBar.slider.maxValue = maxHealth; // this line doesnt heal to full hp
+                //healthBar.setMaxHealth(maxHealth); // this line heals to full hp
+        }
             if (!newScene.Equals(SceneManager.GetActiveScene()))
             {
                 newScene = SceneManager.GetActiveScene();
