@@ -12,11 +12,15 @@ public class Item : ScriptableObject
     public int stackCount = 0;
     public int maxStack = 0;
 
-    public virtual void Use()
+    int healthIncrease = 1;
+
+    // it was virtual
+    public void Use()
     {
         if (name == "Heart")
         {
-            //HealthBar
+            HeroHealth.maxHealth += 1;
+            Inventory.instance.Remove(this);
         }
         Debug.Log("Using " + name);
     }
