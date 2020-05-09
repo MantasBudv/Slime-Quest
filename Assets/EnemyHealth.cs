@@ -11,6 +11,7 @@ public class EnemyHealth : MonoBehaviour
 
     public HealthBar healthBar;
     public GameObject GooPref;
+    public Mole AIscript;
 
     public GameObject HP;
     void Start()
@@ -46,6 +47,8 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Bullet"))
         {
+            AIscript.aggressive = true;
+            AIscript.moveSpeed++;
             TakeDamage();
         }
     }
