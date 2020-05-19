@@ -11,21 +11,41 @@ public class VolumeController : MonoBehaviour
 
     public static float volume;
 
+    public Slider effectsSlider;
+
+    public static float effectsVolume;
+
     void Start()
     {
-        volume = FindObjectOfType<AudioManager>().GetVolume();
-        Debug.Log(volume);
-        slider.maxValue = 1;
-        slider.value = volume;
+        if (slider != null)
+        {
+            volume = FindObjectOfType<AudioManager>().GetVolumeOfBackground();
+            Debug.Log(volume);
+            slider.maxValue = 1;
+            slider.value = volume;
+        }
+        
+        if (effectsSlider != null)
+        {
+            effectsVolume = FindObjectOfType<AudioManager>().GetVolumeOfEffects();
+            Debug.Log(effectsVolume);
+            effectsSlider.maxValue = 1;
+            effectsSlider.value = effectsVolume;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (slider.value != volume)
+        if (slider != null && slider.value != volume)
         {
             volume = slider.value;
-            FindObjectOfType<AudioManager>().SetVolume(slider.value);
+            FindObjectOfType<AudioManager>().SetVolumeOfBackground(slider.value);
+        }
+        if (effectsSlider != null && effectsSlider.value != effectsVolume)
+        {
+            effectsVolume = effectsSlider.value;
+            FindObjectOfType<AudioManager>().SetVolumeOfEffects(effectsSlider.value);
         }
     }
 }
