@@ -49,3 +49,6 @@ TagManager:
   - name: Hero
     uniqueID: 3276622933
     locked: 0
+  - name: OverHero
+    uniqueID: 1451351459
+    locked: 0

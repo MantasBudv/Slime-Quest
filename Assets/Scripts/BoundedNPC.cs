@@ -24,7 +24,7 @@ public class BoundedNPC : Interactable
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
             if (!playerInRange)
             {
@@ -93,7 +93,13 @@ public class BoundedNPC : Interactable
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        ChooseDifferentDirection();
+        anim.SetBool("Stopped", true);
+
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        anim.SetBool("Stopped", false);
     }
 
 }
