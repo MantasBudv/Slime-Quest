@@ -11,6 +11,7 @@ public class MoveSceneOnInteract : MonoBehaviour
     {
         if(other.CompareTag("Player") )
         {
+            SceneStartingPosition.previousLevel = SceneManager.GetActiveScene().name;
             SceneManager.LoadScene(newLevel);
         }
 
