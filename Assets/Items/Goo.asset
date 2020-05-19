@@ -17,4 +17,4 @@ MonoBehaviour:
   isStackable: 1
   stackCount: 0
   maxStack: 2
-  isUsed: 0
+  isUsed: 1

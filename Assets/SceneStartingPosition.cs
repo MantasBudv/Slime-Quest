@@ -11,13 +11,14 @@ public class SceneStartingPosition : MonoBehaviour
     void Start()
     {
         currentLevel = SceneManager.GetActiveScene().name;
+        Debug.Log(previousLevel);
         Debug.Log(currentLevel);
         if (currentLevel == "ForestMap" && previousLevel == "CaveMap")
         {
             Vector3 data;
-            data.x = 43;
-            data.y = 44;
-            data.z = hero.transform.position.z;
+            data.x = 50;
+            data.y = 37;
+            data.z = 3.058594f;
             hero.transform.position = data;
         }
     }
