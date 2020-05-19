@@ -57,7 +57,6 @@ public class InventoryUI : MonoBehaviour
     {
         for (int i = 0; i < slots.Length; i++)
         {
-            Debug.Log("Updated Items");
             if (i < inventory.GetItems().Count)
             {
                 slots[i].AddItem(inventory.GetItems()[i]);
