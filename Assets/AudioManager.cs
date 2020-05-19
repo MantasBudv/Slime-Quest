@@ -47,14 +47,23 @@ public class AudioManager : MonoBehaviour
         }
         s.source.Play();
     }
-    public float GetVolume()
+    public float GetVolumeOfBackground()
     {
         Sound s = Array.Find(sounds, sound => sound.name == "BackgroundMusic");
         return s.source.volume;
     }
-    public void SetVolume(float volume)
+    public void SetVolumeOfBackground(float volume)
     {
         Sound s = Array.Find(sounds, sound => sound.name == "BackgroundMusic");
         s.source.volume = volume;
+    }
+    public float GetVolumeOfEffects()
+    {
+        Sound s = Array.Find(sounds, sound => sound.name != "BackgroundMusic");
+        return s.source.volume;
+    }
+    public void SetVolumeOfEffects(float volume)
+    {
+        Array.ForEach(sounds, sound => { if (sound.name != "BackgroundMusic") sound.source.volume = volume; });
     }
 }
