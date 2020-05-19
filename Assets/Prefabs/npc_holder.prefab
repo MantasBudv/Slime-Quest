@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   context: {fileID: 11400000, guid: 2c5d5664dd6e3f34ab841fb102e81d06, type: 2}
   playerInRange: 0
-  speed: 5
+  speed: 3
   bounds: {fileID: 4425887788011930624}
 --- !u!1 &3060188815181075055
 GameObject:
