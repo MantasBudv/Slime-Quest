@@ -41,6 +41,7 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHealth--;
         healthBar.setHealth(currentHealth);
+        FindObjectOfType<AudioManager>().Play("MoleHit");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
