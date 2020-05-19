@@ -62,3 +62,9 @@ MonoBehaviour:
     pitch: 2
     loop: 0
     source: {fileID: 0}
+  - name: Step
+    clip: {fileID: 8300000, guid: ca0a823a661eaec43915089ad5acb6aa, type: 3}
+    volume: 0.05
+    pitch: 2
+    loop: 0
+    source: {fileID: 0}

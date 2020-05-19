@@ -757,26 +757,26 @@ PrefabInstance:
     - target: {fileID: 1978089480191736890, guid: d46e6a1b8d575a04383229575449ffbf,
         type: 3}
       propertyPath: sounds.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1978089480191736890, guid: d46e6a1b8d575a04383229575449ffbf,
         type: 3}
-      propertyPath: sounds.Array.data[2].name
-      value: MoleHit
+      propertyPath: sounds.Array.data[3].name
+      value: Step
       objectReference: {fileID: 0}
     - target: {fileID: 1978089480191736890, guid: d46e6a1b8d575a04383229575449ffbf,
         type: 3}
-      propertyPath: sounds.Array.data[2].clip
+      propertyPath: sounds.Array.data[3].clip
       value: 
-      objectReference: {fileID: 8300000, guid: b32c06b84b9487e469b884722b621153, type: 3}
+      objectReference: {fileID: 8300000, guid: ca0a823a661eaec43915089ad5acb6aa, type: 3}
     - target: {fileID: 1978089480191736890, guid: d46e6a1b8d575a04383229575449ffbf,
         type: 3}
-      propertyPath: sounds.Array.data[2].volume
+      propertyPath: sounds.Array.data[3].volume
       value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 1978089480191736890, guid: d46e6a1b8d575a04383229575449ffbf,
         type: 3}
-      propertyPath: sounds.Array.data[2].pitch
+      propertyPath: sounds.Array.data[3].pitch
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4276844682006722938, guid: d46e6a1b8d575a04383229575449ffbf,
