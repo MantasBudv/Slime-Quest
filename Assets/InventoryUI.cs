@@ -25,6 +25,10 @@ public class InventoryUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*if (Input.GetKeyDown(KeyCode.P))
+        {
+            LoadInventory();
+        }*/
         if (Input.GetKeyDown(KeyCode.I))
         {
             if (!InventoryIsOpen)
@@ -62,6 +66,20 @@ public class InventoryUI : MonoBehaviour
             {
                 slots[i].ClearSlot();
             }
+            slots[i].UpdateText();
         }
+        //SaveInventory();
     }
+    /*public void SaveInventory()
+    {
+        SaveSystem.SaveInventory(inventory);
+    }
+    public void LoadInventory()
+    {
+        InventoryData data = SaveSystem.LoadInventory();
+
+        Inventory.instance.SetItems(data.items);
+
+        inventory.SetItems(data.items);
+    }*/
 }

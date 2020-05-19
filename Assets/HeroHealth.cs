@@ -30,34 +30,39 @@ public class HeroHealth : MonoBehaviour
         setHealth(currentHealth);
 
         InvokeRepeating("Regenerate", regenerationTime, regenerationTime);
+        InvokeRepeating("SavePlayerForest", 5, 5);
     }
 
     // Update is called once per frame
     void Update()
     {
-            if (healthBar.slider.maxValue != maxHealth)
-            {
-                healthBar.slider.maxValue = maxHealth; // this line doesnt heal to full hp
-                //healthBar.setMaxHealth(maxHealth); // this line heals to full hp
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            LoadPlayerForest();
         }
-            if (!newScene.Equals(SceneManager.GetActiveScene()))
+        if (healthBar.slider.maxValue != maxHealth)
+        {
+            healthBar.slider.maxValue = maxHealth; // this line doesnt heal to full hp
+                                                   //healthBar.setMaxHealth(maxHealth); // this line heals to full hp
+        }
+        if (!newScene.Equals(SceneManager.GetActiveScene()))
+        {
+            newScene = SceneManager.GetActiveScene();
+            if (currentHealth != maxHealth)
             {
-                newScene = SceneManager.GetActiveScene();
-                if (currentHealth != maxHealth)
-                {
-                    healthBar.setHealth(currentHealth);
-                }
+                healthBar.setHealth(currentHealth);
             }
-            if (currentHealth == maxHealth)
-            {
-                if (HP.activeInHierarchy == true)
-                    HP.SetActive(false);
-            }
-            else HP.SetActive(true);
-            if (currentHealth == 0)
-            {
-                GameOver();
-            }
+        }
+        if (currentHealth == maxHealth)
+        {
+            if (HP.activeInHierarchy == true)
+                HP.SetActive(false);
+        }
+        else HP.SetActive(true);
+        if (currentHealth == 0)
+        {
+            GameOver();
+        }
     }
 
     public void TakeDamage()
@@ -110,6 +115,24 @@ public class HeroHealth : MonoBehaviour
         }
 
         yield return 0;
+    }
+
+    public void SavePlayerForest()
+    {
+        SaveSystem.SavePlayerForest(this);
+    }
+    public void LoadPlayerForest()
+    {
+        PlayerData data = SaveSystem.LoadPlayerForest();
+
+        maxHealth = data.maxHealth;
+        currentHealth = data.maxHealth;
+
+        Vector3 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
+        transform.position = position;
     }
 
 }
