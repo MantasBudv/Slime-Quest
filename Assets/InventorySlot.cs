@@ -5,10 +5,12 @@ using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour
 {
-    Item item;
+    public Item item;
 
     public Image icon;
     public Button removeButton;
+
+    public Text counterText;
 
     public void AddItem (Item newItem)
     {
@@ -39,6 +41,21 @@ public class InventorySlot : MonoBehaviour
         if (item != null)
         {
             item.Use();
+        }
+    }
+
+    public void UpdateText()
+    {
+        if (item != null && item.isStackable)
+        {
+            counterText.text = item.stackCount + " / " + item.maxStack;
+            counterText.enabled = true;
+            if (item.stackCount == item.maxStack)
+                counterText.enabled = false;
+        }
+        else
+        {
+            counterText.enabled = false;
         }
     }
 }

@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Goo
   icon: {fileID: 21300000, guid: de01e58c70694ef4189f2dee40582be1, type: 3}
-  isDefaultItem: 0
+  isStackable: 1
+  stackCount: 0
+  maxStack: 2
+  isUsed: 0

@@ -44,8 +44,30 @@ public class Inventory : MonoBehaviour
             Debug.Log("No room in inventory.");
             return false;
         }
+        if (item.isStackable)
+        {
+            bool isNew = true;
+            items.ForEach(i => { if (i.name == "Goo") isNew = false; });
 
-        items.Add(item);
+            if (isNew)
+            {
+                item.stackCount = 0;
+            }
+
+            if (item.stackCount != item.maxStack)
+            {
+                if (isNew)
+                {
+                    item.stackCount++;
+                    items.Add(item);
+                }
+                else
+                {
+                    items.ForEach(i => { if (i.name == "Goo") { i.stackCount++; } });
+                }
+            }
+        } 
+        else items.Add(item);
 
         if (onItemChangedCallback != null)
             onItemChangedCallback.Invoke();
@@ -55,6 +77,8 @@ public class Inventory : MonoBehaviour
 
     public void Remove (Item item)
     {
+        if (item.isStackable)
+            item.stackCount = 0;
         items.Remove(item);
 
         if (onItemChangedCallback != null)
@@ -64,5 +88,10 @@ public class Inventory : MonoBehaviour
     public List<Item> GetItems()
     {
         return items;
+    }
+
+    public void SetItems(List<Item> ITEMS)
+    {
+        items = ITEMS;
     }
 }

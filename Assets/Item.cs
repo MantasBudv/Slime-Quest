@@ -11,6 +11,7 @@ public class Item : ScriptableObject
     public bool isStackable = false;
     public int stackCount = 0;
     public int maxStack = 0;
+    public bool isUsed = false;
 
     int healthIncrease = 1;
 
@@ -21,6 +22,15 @@ public class Item : ScriptableObject
         {
             HeroHealth.maxHealth += 1;
             Inventory.instance.Remove(this);
+        }
+        if (name == "Goo" && stackCount == maxStack)
+        {
+            if (Shapeshifting.Transformations[1] != true && isUsed == false)
+            {
+                isUsed = true;
+                Shapeshifting.Transformations[1] = true;
+                Inventory.instance.Remove(this);
+            }
         }
         Debug.Log("Using " + name);
     }
