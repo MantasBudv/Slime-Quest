@@ -6,7 +6,7 @@ public class Spawner : MonoBehaviour
 {
     public GameObject prefab;
     public Transform spawnPoint;
-    public static int counter;
+    public int counter;
     public int maxCount;
 
     public Transform[] path1;
@@ -46,6 +46,7 @@ public class Spawner : MonoBehaviour
         GameObject mole = Instantiate(prefab, spawnPoint.transform.position, Quaternion.identity);
         mole.GetComponent<Mole>().path[0] = path1[0];
         mole.GetComponent<Mole>().path[1] = path1[1];
+        mole.GetComponent<EnemyHealth>().spawner = gameObject;
         Debug.Log("Spawned");
         counter++;
     }

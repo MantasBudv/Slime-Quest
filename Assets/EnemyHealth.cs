@@ -13,6 +13,7 @@ public class EnemyHealth : MonoBehaviour
     public HealthBar healthBar;
     public GameObject GooPref;
     public Mole AIscript;
+    public GameObject spawner;
 
     public GameObject HP;
     void Start()
@@ -49,7 +50,7 @@ public class EnemyHealth : MonoBehaviour
         if (collision.gameObject.tag.Equals("Bullet"))
         {
             AIscript.aggressive = true;
-            AIscript.moveSpeed++;
+            //AIscript.moveSpeed++;
             TakeDamage();
         }
     }
@@ -60,9 +61,11 @@ public class EnemyHealth : MonoBehaviour
         if (Shapeshifting.Transformations[transformInd] == false)
             Instantiate(GooPref, rb.position, Quaternion.Euler(Vector3.zero));
 
-        Spawner.counter--;
+        //Spawner.counter--;
+        spawner.GetComponent<Spawner>().counter--;
 
-        Spawner otherScript = GameObject.FindObjectOfType(typeof(Spawner)) as Spawner;
-        otherScript.RestartTimer();
+        //Spawner otherScript = GameObject.FindObjectOfType(typeof(Spawner)) as Spawner;
+        //otherScript.RestartTimer();
+        spawner.GetComponent<Spawner>().RestartTimer();
     }
 }

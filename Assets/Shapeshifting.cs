@@ -12,10 +12,11 @@ public class Shapeshifting : MonoBehaviour
     float TransRate = 1f;
     float NextTrans;
 
-    const int NumberOfTransf = 2;
+    const int NumberOfTransf = 3;
     static public bool[] Transformations = new bool[NumberOfTransf];
     // 0 - slime
     // 1 - Mole(bear)
+    // 2 - wolf
     static public int CurrentForm;
     Color SlimePink = new Color(255, 0, 77, 255);
     Color Default = new Color(255, 255, 255, 255);
@@ -68,6 +69,30 @@ public class Shapeshifting : MonoBehaviour
                     Renderer.color = Default;
                     gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
                     gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                }
+        }
+        if ((Input.GetKeyDown(KeyCode.Y)) && (Time.time > NextTrans))
+        {
+            NextTrans = Time.time + TransRate;
+
+            if (Transformations[2])                         //Check if mole/bear form is acquired
+                if (Animator.GetInteger("Form") != 2)       //If player is not in bear/mole form - switch
+                {
+                    Animator.SetInteger("Form", 2);
+                    CurrentForm = 2;
+                    Renderer.color = SlimePink;
+                    gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+                    gameObject.GetComponent<BoxCollider2D>().enabled = true;
+                    PlayerMovement.moveSpeed = 8f;
+                }
+                else
+                {
+                    Animator.SetInteger("Form", 0);
+                    CurrentForm = 0;
+                    Renderer.color = Default;
+                    gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
+                    gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                    PlayerMovement.moveSpeed = 6f;
                 }
         }
     }
