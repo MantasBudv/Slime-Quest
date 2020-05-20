@@ -6,6 +6,7 @@ public class EnemyHealth : MonoBehaviour
 {
     public int maxHealth = 2;
     public int currentHealth;
+    public int transformInd;
 
     public Rigidbody2D rb;
 
@@ -41,7 +42,6 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHealth--;
         healthBar.setHealth(currentHealth);
-        FindObjectOfType<AudioManager>().Play("MoleHit");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -57,7 +57,12 @@ public class EnemyHealth : MonoBehaviour
     void Die ()
     {
         Destroy(gameObject);
-        GameObject goo = Instantiate(GooPref, rb.position, Quaternion.Euler(Vector3.zero));
-        goo.GetComponent<GooScript>().TranformIndex = 1;
+        if (Shapeshifting.Transformations[transformInd] == false)
+            Instantiate(GooPref, rb.position, Quaternion.Euler(Vector3.zero));
+
+        Spawner.counter--;
+
+        Spawner otherScript = GameObject.FindObjectOfType(typeof(Spawner)) as Spawner;
+        otherScript.RestartTimer();
     }
 }

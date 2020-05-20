@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67e0202fd9d3fdb40a6e68308f39c10c, type: 3}
-  m_Name: Goo
+  m_Script: {fileID: 11500000, guid: 17d9fc5541b0cbf49abc19b570745989, type: 3}
+  m_Name: MoleShard
   m_EditorClassIdentifier: 
-  name: Goo
-  icon: {fileID: 21300000, guid: de01e58c70694ef4189f2dee40582be1, type: 3}
+  name: MoleShard
+  icon: {fileID: 21300000, guid: 18f0dcccd20721f4dbafa7a03c6ebec0, type: 3}
   isStackable: 1
   stackCount: 0
   maxStack: 2
-  isUsed: 1
+  isUsed: 0

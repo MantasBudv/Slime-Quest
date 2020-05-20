@@ -5,6 +5,7 @@ using UnityEngine;
 public class GooScript : MonoBehaviour
 {
     public int TranformIndex;
+    
 
     private void OnTriggerEnter2D(Collider2D other)
     {

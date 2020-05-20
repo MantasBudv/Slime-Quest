@@ -16,7 +16,7 @@ public class Item : ScriptableObject
     int healthIncrease = 1;
 
     // it was virtual
-    public void Use()
+    public virtual void Use()
     {
         if (name == "Heart")
         {
@@ -25,12 +25,12 @@ public class Item : ScriptableObject
         }
         if (name == "Goo" && stackCount == maxStack)
         {
-            if (Shapeshifting.Transformations[1] != true && isUsed == false)
-            {
-                isUsed = true;
-                Shapeshifting.Transformations[1] = true;
-                Inventory.instance.Remove(this);
-            }
+            //if (Shapeshifting.Transformations[1] != true && isUsed == false)
+            //{
+            //    isUsed = true;
+            //    Shapeshifting.Transformations[1] = true;
+            //    Inventory.instance.Remove(this);
+            //}
         }
         Debug.Log("Using " + name);
     }

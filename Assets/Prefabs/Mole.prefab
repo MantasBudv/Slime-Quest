@@ -170,9 +170,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 4
   currentHealth: 0
+  transformInd: 1
   rb: {fileID: 6109613385319997763}
   healthBar: {fileID: 6836084324973842547}
-  GooPref: {fileID: 8840911077814937626, guid: 01bf1c87601a8374d974023aa0689b76, type: 3}
+  GooPref: {fileID: 5285809548647855306, guid: 4c9d40a39b26f154db21746c6de950bb, type: 3}
   AIscript: {fileID: 1273293034471067320}
   HP: {fileID: 2714086191343880151}
 --- !u!114 &1273293034471067320
@@ -194,7 +195,9 @@ MonoBehaviour:
   animator: {fileID: 2814984099595203369}
   aggressive: 0
   moveSpeed: 3
-  path: []
+  path:
+  - {fileID: 0}
+  - {fileID: 0}
   currentPoint: 0
   currentGoal: {fileID: 0}
   roundingDistance: 0.1

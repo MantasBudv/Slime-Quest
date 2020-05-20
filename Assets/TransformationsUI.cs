@@ -18,7 +18,6 @@ public class TransformationsUI : MonoBehaviour
             activeTransformations = Shapeshifting.Transformations;
         for (int i = 0; i < activeTransformations.Length; i++)
         {
-            Debug.Log(activeTransformations[i]);
             if (activeTransformations[i] == true)
                 Transformatios[i].SetActive(true);
             else Transformatios[i].SetActive(false);
