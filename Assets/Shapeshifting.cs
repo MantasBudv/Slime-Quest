@@ -25,6 +25,7 @@ public class Shapeshifting : MonoBehaviour
     {
         Animator = GetComponent<Animator>();
         Renderer = GetComponent<SpriteRenderer>();
+        Transformations[0] = true;
     }
 
 
