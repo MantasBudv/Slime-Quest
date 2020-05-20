@@ -44,14 +44,15 @@ public class Inventory : MonoBehaviour
             Debug.Log("No room in inventory.");
             return false;
         }
-        if (item.isStackable)
+        if ((item.isStackable) && (item.name == "MoleShard"))
         {
             bool isNew = true;
-            items.ForEach(i => { if (i.name == "Goo") isNew = false; });
+            items.ForEach(i => { if (i.name == "MoleShard") isNew = false; });
 
             if (isNew)
             {
                 item.stackCount = 0;
+                item.isUsed = false;
             }
 
             if (item.stackCount != item.maxStack)
@@ -63,7 +64,7 @@ public class Inventory : MonoBehaviour
                 }
                 else
                 {
-                    items.ForEach(i => { if (i.name == "Goo") { i.stackCount++; } });
+                    items.ForEach(i => { if (i.name == "MoleShard") { i.stackCount++; } });
                 }
             }
         } 
