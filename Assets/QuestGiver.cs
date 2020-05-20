@@ -9,13 +9,15 @@ public class QuestGiver : MonoBehaviour
     public Text titleText;
     public Text descriptionText;
 
+    public void Start()
+    {
+        UpdateUI();
+    }
     public void AcceptQuest()
     {
         titleText.text = Quest.title;
         descriptionText.text = Quest.description;
-        Debug.Log(Quest.isActive);
         Quest.Accept();
-        Debug.Log(Quest.isActive);
     }
     public void FinishQuest()
     {
@@ -37,11 +39,23 @@ public class QuestGiver : MonoBehaviour
     {
         return QuestGoal.isReachedKillCount();
     }
+    public void UpdateUI()
+    {
+        if (Quest.isActive)
+        {
+            titleText.text = Quest.title;
+            descriptionText.text = Quest.description;
+        }
+        else
+        {
+            MakeQuestDefault();
+        }
+    }
 }
 public class Quest
 {
     public static string title = "Adventures Begin!";
-    public static string description = "Bring back the wand to witch from the dungeon";
+    public static string description = "Kill 3 enemies and go back to witch to collect your reward!";
     public static bool isActive = false;
     public static bool isFinished = false;
 
