@@ -185,8 +185,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.4, y: 65.5}
-  m_SizeDelta: {x: 140.5, y: 164.2}
+  m_AnchoredPosition: {x: -1, y: 74.9}
+  m_SizeDelta: {x: 151.8, y: 191.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8848500206834070450
 CanvasRenderer:
@@ -209,12 +209,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.80833924, g: 0.84196436, b: 0.990566, a: 0.7294118}
+  m_Color: {r: 1, g: 0.78039217, b: 0.78039217, a: 0.65882355}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7de7fc7d1713b8048985b62fe9b75077, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c8e21273e0bb5746951ffb8c966fe52, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -277,7 +277,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16.5, y: -9.8}
+  m_AnchoredPosition: {x: -20.519997, y: -9.8}
   m_SizeDelta: {x: 981.277, y: 81.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8848500206945600554
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.078431375, g: 0.019607844, b: 0.16470589, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -354,8 +354,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16.5, y: 46.4}
-  m_SizeDelta: {x: 982.225, y: 38.8}
+  m_AnchoredPosition: {x: -20.52, y: 45.180004}
+  m_SizeDelta: {x: 982.225, y: 45.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8848500208857477372
 CanvasRenderer:
@@ -378,24 +378,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.14150941, g: 0.007843138, b: 0.13683693, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3ec22532e2571d44abe84e54ffe7ca4d, type: 3}
-    m_FontSize: 30
+    m_Font: {fileID: 12800000, guid: 1976b9555dedee34dac19579f6ab967c, type: 3}
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
+    m_MinSize: 3
+    m_MaxSize: 300
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Name
-
-'
+  m_Text: Name
