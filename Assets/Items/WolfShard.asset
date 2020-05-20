@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcdd1ef138166d04eb88ebf98faf6746, type: 3}
+  m_Name: WolfShard
+  m_EditorClassIdentifier: 
+  name: WolfShard
+  icon: {fileID: 3661512013153206277, guid: b71558bf123e72840922e93b9d7f5f0a, type: 3}
+  isStackable: 1
+  stackCount: 1
+  maxStack: 2
+  isUsed: 0
