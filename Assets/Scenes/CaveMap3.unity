@@ -245,12 +245,12 @@ PrefabInstance:
     - target: {fileID: 4168437031276681251, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -66.1839
+      value: -66.14932
       objectReference: {fileID: 0}
     - target: {fileID: 4168437031276681251, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -36.355957
+      value: -36.355965
       objectReference: {fileID: 0}
     - target: {fileID: 7302934015124953493, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
@@ -575,8 +575,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    sentences:
-    - I wonder what made that splash
+  - sentences:
+    - I wonder what made that splash?
     name: 
 --- !u!114 &8715306830298118815
 MonoBehaviour:

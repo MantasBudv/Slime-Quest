@@ -13,6 +13,10 @@ GameObject:
   - component: {fileID: 2314472324416244132}
   - component: {fileID: 6035696988059496071}
   - component: {fileID: 2853844639236578900}
+  - component: {fileID: 6139308366398279952}
+  - component: {fileID: 674656594869830095}
+  - component: {fileID: 7511626678031253565}
+  - component: {fileID: 4805302943476206595}
   m_Layer: 0
   m_Name: npc
   m_TagString: Untagged
@@ -112,7 +116,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657668532555030299}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -137,10 +141,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9bc700ac2625ed48b20648e58a5e4b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  context: {fileID: 11400000, guid: 2c5d5664dd6e3f34ab841fb102e81d06, type: 2}
   playerInRange: 0
   speed: 3
   bounds: {fileID: 4425887788011930624}
+--- !u!70 &6139308366398279952
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657668532555030299}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.06493807, y: 0}
+  m_Size: {x: 0.87012386, y: 0.97888935}
+  m_Direction: 0
+--- !u!70 &674656594869830095
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657668532555030299}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.06493807, y: 0}
+  m_Size: {x: 0.87012386, y: 0.97888935}
+  m_Direction: 0
+--- !u!114 &7511626678031253565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657668532555030299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f19d40e5e8b324fbbd12ddacdc7c58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - sentences:
+    - Don't interrupt my walking!
+    name: Green Man
+    portrait: {fileID: 21300000, guid: fc0c67814b40aad4e9d8b45dccb97aec, type: 3}
+    hasPortrait: 1
+--- !u!114 &4805302943476206595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657668532555030299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 823e389cdf33d7c45acbb2c0e89b9aa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogBox: {fileID: 0}
+  PlayerInRange: 0
+  trigger: {fileID: 7511626678031253565}
+  manager: {fileID: 0}
 --- !u!1 &3060188815181075055
 GameObject:
   m_ObjectHideFlags: 0
