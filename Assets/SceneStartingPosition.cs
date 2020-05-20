@@ -11,8 +11,8 @@ public class SceneStartingPosition : MonoBehaviour
     void Start()
     {
         currentLevel = SceneManager.GetActiveScene().name;
-        Debug.Log("Previous level " + previousLevel);
-        Debug.Log("Current level " + currentLevel);
+        //Debug.Log("Previous level " + previousLevel);
+        //Debug.Log("Current level " + currentLevel);
         Vector3 data;
         data.z = 3.058594f;
         if (currentLevel == "ForestMap" && previousLevel == "CaveMap")
