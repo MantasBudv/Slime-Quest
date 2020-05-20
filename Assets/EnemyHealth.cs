@@ -18,7 +18,7 @@ public class EnemyHealth : MonoBehaviour
     public GameObject HP;
     void Start()
     {
-
+        Debug.Log(Quest.isActive);
         currentHealth = maxHealth;
         healthBar.setMaxHealth(maxHealth);
 
@@ -67,5 +67,7 @@ public class EnemyHealth : MonoBehaviour
         //Spawner otherScript = GameObject.FindObjectOfType(typeof(Spawner)) as Spawner;
         //otherScript.RestartTimer();
         spawner.GetComponent<Spawner>().RestartTimer();
+
+        QuestGoal.currentAmount++;
     }
 }

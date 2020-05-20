@@ -12,9 +12,10 @@ public class ItemPickup : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("picking up " + item.name);
-            bool wasPickedUp = Inventory.instance.Add(item);
-            if (wasPickedUp) 
-                Destroy(gameObject);
+            if (!item.isUsed)
+            Inventory.instance.Add(item);
+            
+            Destroy(gameObject);
         }
     }
 }
