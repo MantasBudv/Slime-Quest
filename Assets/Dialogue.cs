@@ -10,5 +10,7 @@ public class Dialogue
 
 
     public string name;
+    public Sprite portrait;
+    public bool hasPortrait;
     
 }

@@ -11,6 +11,9 @@ public class BoundedNPC : Interactable
     private Animator anim;
     public Collider2D bounds;
 
+    private bool stopped;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,15 +24,18 @@ public class BoundedNPC : Interactable
         myTransform = GetComponent<Transform>();
         myRigidbody = GetComponent<Rigidbody2D>();
         ChangeDirection();
+        Invoke("RandomStop", 0.5f);
+        Invoke("RandomGo", 2f);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-            if (!playerInRange)
-            {
-                Move();
-            }
+        if ((!playerInRange) && (!anim.GetBool("Stopped")))
+        {
+            Move();
+                
+        }
 
     }
 
@@ -94,12 +100,38 @@ public class BoundedNPC : Interactable
     private void OnCollisionEnter2D(Collision2D other)
     {
         anim.SetBool("Stopped", true);
+        stopped = true;
 
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
         anim.SetBool("Stopped", false);
+        stopped = false;
+    }
+
+
+    void RandomStop()
+    {
+        float randomTime = Random.Range(1f, 3f);
+
+        anim.SetBool("Stopped", true);
+
+        Invoke("RandomStop", randomTime);
+        //anim.SetBool("Stopped", false);
+
+    }
+
+    void RandomGo()
+    {
+        float randomTime = Random.Range(1f, 3f);
+
+        if(!stopped)
+        anim.SetBool("Stopped", false);
+
+        Invoke("RandomGo", randomTime);
+        //anim.SetBool("Stopped", false);
+
     }
 
 }

@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     public Text nameText;
     public Text dialogueText;
     public Animator animator;
+    public GameObject portrait = null;
 
 
 
@@ -18,11 +19,15 @@ public class DialogueManager : MonoBehaviour
     {
         sentences = new Queue<string>();
 
+
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
         animator.SetBool("isopen", true);
+        changeImage(dialogue.portrait);
+        if (dialogue.hasPortrait)
+        portrait.SetActive(true);
 
         nameText.text = dialogue.name;
 
@@ -64,6 +69,13 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         animator.SetBool("isopen", false);
+        portrait.SetActive(false);
     }
+
+    public void changeImage(Sprite image)
+    {
+        portrait.GetComponent<Image>().sprite = image;
+    }
+
 
 }
