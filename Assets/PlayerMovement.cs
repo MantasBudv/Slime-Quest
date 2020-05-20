@@ -38,6 +38,13 @@ public class PlayerMovement : MonoBehaviour
         //movement
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
 
+        if (movement.sqrMagnitude > 0.01f && !IsInvoking("playStepSound"))
+            InvokeRepeating("playStepSound", 0, 0.5f);
+        else if (movement.sqrMagnitude < 0.01f)
+            CancelInvoke();
     }
-
+    public void playStepSound()
+    {
+        FindObjectOfType<AudioManager>().Play("HeroWalk");
+    }
 }
