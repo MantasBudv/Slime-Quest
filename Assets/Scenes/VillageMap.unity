@@ -407,9 +407,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30b09f2a0961e934397c1ffa24f6b31c, type: 3}
---- !u!114 &1320307758 stripped
+--- !u!114 &1307075061 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1025466715500686684, guid: 30b09f2a0961e934397c1ffa24f6b31c,
+  m_CorrespondingSourceObject: {fileID: 5573391773175427356, guid: 30b09f2a0961e934397c1ffa24f6b31c,
     type: 3}
   m_PrefabInstance: {fileID: 1039303030}
   m_PrefabAsset: {fileID: 0}
@@ -495,7 +495,7 @@ PrefabInstance:
         type: 3}
       propertyPath: manager
       value: 
-      objectReference: {fileID: 1320307758}
+      objectReference: {fileID: 1307075061}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7ce11222307f294ba69bccaf4fe1d09, type: 3}
 --- !u!60 &2111556162 stripped

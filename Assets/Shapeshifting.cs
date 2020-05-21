@@ -32,7 +32,7 @@ public class Shapeshifting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!newScene.Equals(SceneManager.GetActiveScene()))   
+        if ((!newScene.Equals(SceneManager.GetActiveScene())) || (SaveManager.hasLoaded))
         {
             newScene = SceneManager.GetActiveScene();
             if (CurrentForm != 0)
