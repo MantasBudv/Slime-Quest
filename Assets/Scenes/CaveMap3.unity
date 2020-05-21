@@ -695,7 +695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-  - sentences:
+    sentences:
     - I wonder what made that splash?
     name: 
     portrait: {fileID: 0}

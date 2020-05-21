@@ -6,12 +6,16 @@ public class HeroQuest : MonoBehaviour
 {
     public QuestGiver questGiver;
     public bool PlayerInRange;
+    public GameObject dialogbox;
     void Update()
     {
         if (PlayerInRange && Input.GetButtonDown("Interact"))
         {
             if (!Quest.isActive && !Quest.isFinished)
             {
+
+                //if (dialogbox.GetComponent<Animator>().GetBool("isopen"))
+                new WaitUntil(() => dialogbox.GetComponent<Animator>().GetBool("isopen"));
                 questGiver.AcceptQuest();
             }
             if (Quest.isActive)

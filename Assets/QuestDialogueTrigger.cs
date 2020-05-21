@@ -8,6 +8,7 @@ public class QuestDialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
+        
         if ((!Quest.isActive) && (!Quest.isFinished))
         {
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue[0]);
@@ -21,5 +22,6 @@ public class QuestDialogueTrigger : MonoBehaviour
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue[2]);
         }
     }
+
 
 }
