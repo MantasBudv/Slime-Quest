@@ -13,6 +13,11 @@ public class QuestGiver : MonoBehaviour
     {
         UpdateUI();
     }
+    private void Update()
+    {
+        if (SaveManager.hasLoaded)
+            UpdateUI();
+    }
     public void AcceptQuest()
     {
         titleText.text = Quest.title;
