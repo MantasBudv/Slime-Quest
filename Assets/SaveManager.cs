@@ -105,16 +105,17 @@ public class SaveManager : MonoBehaviour
                 SceneManager.LoadScene(instance.activeSave.currScene);
             //SceneManager.sceneLoaded += OnSceneLoaded;
             
-            Shapeshifting.Transformations = instance.activeSave.transformations;        //Aquired Transformations
-            SpaghettiLoad();                                                            //Shards 'spagetis' (pataisyti)
-            HeroHealth.maxHealth = instance.activeSave.maxHP;                           //Max Health
-            HeroHealth.currentHealth = instance.activeSave.currHP;                      //Current Health (known bug: issaugoti sliderio reikšmę)
-            Shapeshifting.CurrentForm = instance.activeSave.currForm;                   //Current Form
-            //Inventory.instance.SetItems(instance.activeSave.inventory);               //Inventory
-            Quest.isActive = instance.activeSave.questA;                                //Active quest
-            Quest.isFinished = instance.activeSave.questF;                              //Finished quest
-            QuestGoal.currentAmount = instance.activeSave.questAmount;                  //Quest kills
-            player.transform.position = instance.activeSave.respawnPosition;            //Possition
+            
+                HeroHealth.maxHealth = instance.activeSave.maxHP;                           //Max Health
+                HeroHealth.currentHealth = instance.activeSave.currHP;                      //Current Health (known bug: issaugoti sliderio reikšmę)
+                Shapeshifting.CurrentForm = instance.activeSave.currForm;                   //Current Form
+                                                                                            //Inventory.instance.SetItems(instance.activeSave.inventory);               //Inventory
+                Quest.isActive = instance.activeSave.questA;                                //Active quest
+                Quest.isFinished = instance.activeSave.questF;                              //Finished quest
+                QuestGoal.currentAmount = instance.activeSave.questAmount;                  //Quest kills
+                player.transform.position = instance.activeSave.respawnPosition;            //Possition
+                Shapeshifting.Transformations = instance.activeSave.transformations;        //Aquired Transformations
+                SpaghettiLoad();                                                            //Shards 'spagetis' (pataisyti)
 
 
         }

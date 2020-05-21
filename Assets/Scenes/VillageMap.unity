@@ -496,6 +496,32 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 1307075061}
+    - target: {fileID: 7511626678031253565, guid: a7ce11222307f294ba69bccaf4fe1d09,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511626678031253565, guid: a7ce11222307f294ba69bccaf4fe1d09,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Don't interupt my walking!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511626678031253565, guid: a7ce11222307f294ba69bccaf4fe1d09,
+        type: 3}
+      propertyPath: dialogue.name
+      value: Green Man
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511626678031253565, guid: a7ce11222307f294ba69bccaf4fe1d09,
+        type: 3}
+      propertyPath: dialogue.portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: fc0c67814b40aad4e9d8b45dccb97aec,
+        type: 3}
+    - target: {fileID: 7511626678031253565, guid: a7ce11222307f294ba69bccaf4fe1d09,
+        type: 3}
+      propertyPath: dialogue.hasPortrait
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7ce11222307f294ba69bccaf4fe1d09, type: 3}
 --- !u!60 &2111556162 stripped

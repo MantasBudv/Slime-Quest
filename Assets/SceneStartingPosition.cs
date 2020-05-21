@@ -45,5 +45,11 @@ public class SceneStartingPosition : MonoBehaviour
             data.y = -0.16f;
             hero.transform.position = data;
         }
+        else if (currentLevel == "ForestMap" && previousLevel == "WitchHouse")
+        {
+            data.x = 43.31f;
+            data.y = -28.01f;
+            hero.transform.position = data;
+        }
     }
 }
