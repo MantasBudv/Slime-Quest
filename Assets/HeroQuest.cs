@@ -20,7 +20,7 @@ public class HeroQuest : MonoBehaviour
             }
             if (Quest.isActive)
             {
-                switch (QuestGoal.questType)
+                switch (Quest.questType)
                 {
                     case "Kill":
                         if (questGiver.CheckKillCount())
