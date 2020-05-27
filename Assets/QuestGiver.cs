@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +10,8 @@ public class QuestGiver : MonoBehaviour
 {
     public Text titleText;
     public Text descriptionText;
+    public Text counterText;
+    private static int questIndex = 0;
 
     public void Start()
     {
@@ -15,25 +19,30 @@ public class QuestGiver : MonoBehaviour
     }
     private void Update()
     {
-        if (SaveManager.hasLoaded)
-            UpdateUI();
+        UpdateUI();
     }
     public void AcceptQuest()
     {
-        titleText.text = Quest.title;
-        descriptionText.text = Quest.description;
-        Quest.Accept();
+        if (!Quest.isActive)
+        {
+            Quest.UpdateQuest(QuestsStorage.titles[questIndex], QuestsStorage.descriptions[questIndex], QuestsStorage.types[questIndex]);
+            titleText.text = Quest.title;
+            descriptionText.text = Quest.description;
+            Quest.Accept();
+        }
     }
     public void FinishQuest()
     {
         Quest.Finish();
-        QuestGoal.resetAmount();
+        QuestGoal.resetValues();
         MakeQuestDefault();
+        questIndex++;
     }
     public void MakeQuestDefault()
     {
         titleText.text = "No active Quest";
-        descriptionText.text = "Go get a quest by talking to a witch living in a house near the woods.";
+        descriptionText.text = "No active Quest description";
+        counterText.text = "";
     }
     public void IncrementKillCount()
     {
@@ -54,6 +63,7 @@ public class QuestGiver : MonoBehaviour
         {
             titleText.text = Quest.title;
             descriptionText.text = Quest.description;
+            counterText.text = QuestGoal.currentAmount + " / " + QuestGoal.requiredAmount;
         }
         else
         {
@@ -63,25 +73,32 @@ public class QuestGiver : MonoBehaviour
 }
 public class Quest
 {
-    public static string title = "Adventures Begin!";
-    public static string description = "Kill 3 enemies and go back to witch to collect your reward!";
+    public static string title = "";
+    public static string description = "";
     public static bool isActive = false;
     public static bool isFinished = false;
+    public static string questType = "";
 
     public static void Accept()
     {
         isActive = true;
+        isFinished = false;
     }
     public static void Finish()
     {
         isActive = false;
         isFinished = true;
     }
+    public static void UpdateQuest(string titleNew, string descriptionNew, string typeNew)
+    {
+        title = titleNew;
+        description = descriptionNew;
+        questType = typeNew;
+    }
 }
 
 public class QuestGoal
 {
-    public static string questType = "Kill";
     public static int requiredAmount = 3;
     public static int currentAmount = 0;
 
@@ -96,8 +113,9 @@ public class QuestGoal
     {
         return (requiredItem == currentItem);
     }
-    public static void resetAmount()
+    public static void resetValues()
     {
         currentAmount = 0;
+        currentItem = "nothing";
     }
 }
