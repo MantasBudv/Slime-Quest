@@ -1483,6 +1483,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7014843700920800878, guid: d0621fda0dffaab4ab6c113c7292582c,
+        type: 3}
+      propertyPath: m_Text
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7978622151838524484, guid: d0621fda0dffaab4ab6c113c7292582c,
         type: 3}
       propertyPath: m_Name
@@ -3186,11 +3191,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TransformationIndicator
       objectReference: {fileID: 0}
-    - target: {fileID: 7978622151838524484, guid: d0621fda0dffaab4ab6c113c7292582c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0621fda0dffaab4ab6c113c7292582c, type: 3}
 --- !u!224 &8226216768573811518 stripped
@@ -3316,6 +3316,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7014843700920800878, guid: d0621fda0dffaab4ab6c113c7292582c,
+        type: 3}
+      propertyPath: m_Text
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7978622151838524484, guid: d0621fda0dffaab4ab6c113c7292582c,
         type: 3}
