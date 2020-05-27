@@ -20,9 +20,20 @@ public class HeroQuest : MonoBehaviour
             }
             if (Quest.isActive)
             {
-                if (questGiver.CheckKillCount())
+                switch (QuestGoal.questType)
                 {
-                    questGiver.FinishQuest();
+                    case "Kill":
+                        if (questGiver.CheckKillCount())
+                        {
+                            questGiver.FinishQuest();
+                        }
+                        break;
+                    case "Fetch":
+                        if (questGiver.CheckItemFetched())
+                        {
+                            questGiver.FinishQuest();
+                        }
+                        break;
                 }
             }
         }

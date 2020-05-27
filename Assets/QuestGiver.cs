@@ -33,7 +33,7 @@ public class QuestGiver : MonoBehaviour
     public void MakeQuestDefault()
     {
         titleText.text = "No active Quest";
-        descriptionText.text = "No active Quest description";
+        descriptionText.text = "Go get a quest by talking to a witch living in a house near the woods.";
     }
     public void IncrementKillCount()
     {
@@ -43,6 +43,10 @@ public class QuestGiver : MonoBehaviour
     public bool CheckKillCount()
     {
         return QuestGoal.isReachedKillCount();
+    }
+    public bool CheckItemFetched()
+    {
+        return QuestGoal.isItemCollected();
     }
     public void UpdateUI()
     {
@@ -77,6 +81,7 @@ public class Quest
 
 public class QuestGoal
 {
+    public static string questType = "Kill";
     public static int requiredAmount = 3;
     public static int currentAmount = 0;
 
