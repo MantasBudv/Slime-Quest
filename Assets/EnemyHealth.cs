@@ -68,7 +68,7 @@ public class EnemyHealth : MonoBehaviour
         //Spawner otherScript = GameObject.FindObjectOfType(typeof(Spawner)) as Spawner;
         //otherScript.RestartTimer();
         spawner.GetComponent<Spawner>().RestartTimer();
-
-        QuestGoal.currentAmount++;
+        if (Quest.isActive)
+            QuestGoal.currentAmount++;
     }
 }

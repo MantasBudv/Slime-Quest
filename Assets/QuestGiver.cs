@@ -25,9 +25,10 @@ public class QuestGiver : MonoBehaviour
     {
         if (!Quest.isActive)
         {
-            Quest.UpdateQuest(QuestsStorage.titles[questIndex], QuestsStorage.descriptions[questIndex], QuestsStorage.types[questIndex]);
+            Quest.UpdateQuest(QuestsStorage.titles[questIndex], QuestsStorage.descriptions[questIndex], QuestsStorage.types[questIndex], QuestsStorage.itemsToFetch[questIndex]);
             titleText.text = Quest.title;
             descriptionText.text = Quest.description;
+            counterText.text = "";
             Quest.Accept();
         }
     }
@@ -63,7 +64,17 @@ public class QuestGiver : MonoBehaviour
         {
             titleText.text = Quest.title;
             descriptionText.text = Quest.description;
-            counterText.text = QuestGoal.currentAmount + " / " + QuestGoal.requiredAmount;
+
+            if (Quest.questType == "Kill")
+                counterText.text = QuestGoal.currentAmount + " / " + QuestGoal.requiredAmount;
+            else if (Quest.questType == "Fetch")
+            {
+                Inventory.instance.GetItems().ForEach((i) => { if (i.name.Equals(QuestGoal.requiredItem)) QuestGoal.currentItem = i.name; } );
+                if (QuestGoal.isItemCollected())
+                {
+                    Quest.description = QuestsStorage.afterItemDescription[questIndex];
+                }
+            }
         }
         else
         {
@@ -73,10 +84,10 @@ public class QuestGiver : MonoBehaviour
 }
 public class Quest
 {
-    public static string title = "";
-    public static string description = "";
     public static bool isActive = false;
     public static bool isFinished = false;
+    public static string title = "";
+    public static string description = "";
     public static string questType = "";
 
     public static void Accept()
@@ -89,11 +100,12 @@ public class Quest
         isActive = false;
         isFinished = true;
     }
-    public static void UpdateQuest(string titleNew, string descriptionNew, string typeNew)
+    public static void UpdateQuest(string titleNew, string descriptionNew, string typeNew, string requiredItemNew)
     {
         title = titleNew;
         description = descriptionNew;
         questType = typeNew;
+        QuestGoal.requiredItem = requiredItemNew;
     }
 }
 
