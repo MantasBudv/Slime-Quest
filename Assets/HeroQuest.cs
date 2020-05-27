@@ -5,52 +5,79 @@ using UnityEngine;
 public class HeroQuest : MonoBehaviour
 {
     public QuestGiver questGiver;
-    public bool PlayerInRange;
+    public static bool PlayerInRange;
+
+    public static bool PlayerInRangeWitch;
+    public static bool witchQuestCompleted = false;
+
+    public static bool PlayerInRangeGreenMan;
+    public static bool greenManQuestCompleted = false;
+
     public GameObject dialogbox;
     void Update()
     {
         if (PlayerInRange && Input.GetButtonDown("Interact"))
         {
-            if (!Quest.isActive && !Quest.isFinished)
-            {
-
-                //if (dialogbox.GetComponent<Animator>().GetBool("isopen"))
-                new WaitUntil(() => dialogbox.GetComponent<Animator>().GetBool("isopen"));
-                questGiver.AcceptQuest();
-            }
             if (Quest.isActive)
             {
-                switch (Quest.questType)
+                if ((PlayerInRangeWitch && !witchQuestCompleted) || (PlayerInRangeGreenMan && !greenManQuestCompleted))
                 {
-                    case "Kill":
-                        if (questGiver.CheckKillCount())
-                        {
-                            questGiver.FinishQuest();
-                        }
-                        break;
-                    case "Fetch":
-                        if (questGiver.CheckItemFetched())
-                        {
-                            questGiver.FinishQuest();
-                        }
-                        break;
+                    switch (Quest.questType)
+                    {
+                        case "Kill":
+                            if (questGiver.CheckKillCount())
+                            {
+                                questGiver.FinishQuest();
+                                if (PlayerInRangeWitch) witchQuestCompleted = true;
+                                else if (PlayerInRangeGreenMan) greenManQuestCompleted = true;
+                            }
+                            break;
+                        case "Fetch":
+                            if (questGiver.CheckItemFetched())
+                            {
+                                questGiver.FinishQuest();
+                                if (PlayerInRangeWitch) witchQuestCompleted = true;
+                                else if (PlayerInRangeGreenMan) greenManQuestCompleted = true;
+                            }
+                            break;
+                    }
+                }
+                
+            }
+            else if (!Quest.isActive)
+            {
+                if ((PlayerInRangeWitch && !witchQuestCompleted) || (PlayerInRangeGreenMan && !greenManQuestCompleted))
+                {
+                    //if (dialogbox.GetComponent<Animator>().GetBool("isopen"))
+                    new WaitUntil(() => dialogbox.GetComponent<Animator>().GetBool("isopen"));
+                    questGiver.AcceptQuest();
                 }
             }
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        PlayerInRange = true;
         if (collision.collider.CompareTag("Witch"))
         {
-            PlayerInRange = true;
+            PlayerInRangeWitch = true;
+        }
+        if (collision.collider.CompareTag("Green Man"))
+        {
+            PlayerInRangeGreenMan = true;
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
+        PlayerInRange = false;
         if (collision.collider.CompareTag("Witch"))
         {
-            PlayerInRange = false;
+            PlayerInRangeWitch = false;
+        }
+        if (collision.collider.CompareTag("Green Man"))
+        {
+            PlayerInRangeGreenMan = false;
         }
     }
 }
