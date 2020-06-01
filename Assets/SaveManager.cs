@@ -28,7 +28,7 @@ public class SaveManager : MonoBehaviour
             instance = this;
             if (!hasLoaded) 
             { 
-                Load();
+                //Load();
                 ms.isUsed = false;
                 ws.isUsed = false;
             }
