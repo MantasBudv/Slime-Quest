@@ -7,7 +7,11 @@ public class RestartButton : MonoBehaviour
 {
     public void restartScene()
     {
-        SceneManager.LoadScene("ForestMap");
         Time.timeScale = 1f;
+        SaveManager.instance.Load();
+        if (!SaveManager.hasLoaded)
+        {
+            SceneManager.LoadScene("ForestMap");
+        }
     }
 }
