@@ -30,16 +30,11 @@ public class HeroHealth : MonoBehaviour
         setHealth(currentHealth);
 
         InvokeRepeating("Regenerate", regenerationTime, regenerationTime);
-        InvokeRepeating("SavePlayerForest", 5, 5);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            LoadPlayerForest();
-        }
         if (healthBar.slider.maxValue != maxHealth)
         {
             healthBar.slider.maxValue = maxHealth; // this line doesnt heal to full hp
@@ -115,24 +110,6 @@ public class HeroHealth : MonoBehaviour
         }
 
         yield return 0;
-    }
-
-    public void SavePlayerForest()
-    {
-        SaveSystem.SavePlayerForest(this);
-    }
-    public void LoadPlayerForest()
-    {
-        PlayerData data = SaveSystem.LoadPlayerForest();
-
-        maxHealth = data.maxHealth;
-        currentHealth = data.maxHealth;
-
-        Vector3 position;
-        position.x = data.position[0];
-        position.y = data.position[1];
-        position.z = data.position[2];
-        transform.position = position;
     }
 
 }

@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: MoleShard
   m_EditorClassIdentifier: 
   name: MoleShard
-  icon: {fileID: 21300000, guid: 18f0dcccd20721f4dbafa7a03c6ebec0, type: 3}
   isStackable: 1
   stackCount: 0
   maxStack: 3

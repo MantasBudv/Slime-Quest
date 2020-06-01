@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: WolfShard
   m_EditorClassIdentifier: 
   name: WolfShard
-  icon: {fileID: 3661512013153206277, guid: b71558bf123e72840922e93b9d7f5f0a, type: 3}
   isStackable: 1
   stackCount: 0
-  maxStack: 2
-  isUsed: 0
+  maxStack: 3
+  isUsed: 1

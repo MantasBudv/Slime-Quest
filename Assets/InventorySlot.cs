@@ -9,14 +9,14 @@ public class InventorySlot : MonoBehaviour
 
     public Image icon;
     public Button removeButton;
-
+    public Sprite tempSprite;
     public Text counterText;
 
     public void AddItem (Item newItem)
     {
         item = newItem;
-
-        icon.sprite = item.icon;
+        tempSprite = Resources.Load<Sprite>("ItemSprites/" + item.name);
+        icon.sprite = tempSprite;
         icon.enabled = true;
 
         removeButton.interactable = true;
@@ -48,6 +48,7 @@ public class InventorySlot : MonoBehaviour
     {
         if (item != null && item.isStackable)
         {
+            Debug.Log(item.stackCount);
             counterText.text = item.stackCount + " / " + item.maxStack;
             counterText.enabled = true;
             if (item.stackCount == item.maxStack)
