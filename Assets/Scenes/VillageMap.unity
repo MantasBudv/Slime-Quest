@@ -577,7 +577,7 @@ Transform:
   m_LocalScale: {x: 1.4499998, y: 1.48, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1307075061 stripped
 MonoBehaviour:
