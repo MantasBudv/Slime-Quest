@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -67,18 +68,5 @@ public class InventoryUI : MonoBehaviour
             }
             slots[i].UpdateText();
         }
-        //SaveInventory();
     }
-    /*public void SaveInventory()
-    {
-        SaveSystem.SaveInventory(inventory);
-    }
-    public void LoadInventory()
-    {
-        InventoryData data = SaveSystem.LoadInventory();
-
-        Inventory.instance.SetItems(data.items);
-
-        inventory.SetItems(data.items);
-    }*/
 }

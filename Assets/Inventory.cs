@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -24,7 +25,7 @@ public class Inventory : MonoBehaviour
     public OnItemChanged onItemChangedCallback;
 
     public static int space = 12;
-
+    
     public static List<Item> items = new List<Item>();
 
     private static Scene newScene;
@@ -36,6 +37,7 @@ public class Inventory : MonoBehaviour
             newScene = SceneManager.GetActiveScene();
             onItemChangedCallback.Invoke();
         }
+        //Debug.Log(items.Count);
     }
     public bool Add (Item item)
     {
@@ -44,7 +46,7 @@ public class Inventory : MonoBehaviour
             Debug.Log("No room in inventory.");
             return false;
         }
-        if ((item.isStackable) /*&& (item.name == "MoleShard")*/)
+        if (item.isStackable)
         {
             bool isNew = true;
             items.ForEach(i => { if (i.name == item.name) isNew = false; });
@@ -55,7 +57,7 @@ public class Inventory : MonoBehaviour
                 item.isUsed = false;
             }
 
-            if (item.stackCount != item.maxStack)
+            if ((item.stackCount != item.maxStack) && (!SaveManager.hasLoaded))
             {
                 if (isNew)
                 {
@@ -65,6 +67,33 @@ public class Inventory : MonoBehaviour
                 else
                 {
                     items.ForEach(i => { if (i.name == item.name) { i.stackCount++; } });
+                }
+            }
+            else                            //stupid code for when the items are loaded in
+            {
+                int stack = 0;
+                int maxstack = 3;
+                foreach (var j in items)
+                {
+                    if (item.name == j.name)
+                    {
+                        stack = j.stackCount;
+                        maxstack = j.maxStack;
+                        break;
+                    }
+                }
+
+                if ((stack != maxstack))
+                {
+                    if (isNew)
+                    {
+                        item.stackCount++;
+                        items.Add(item);
+                    }
+                    else
+                    {
+                        items.ForEach(i => { if (i.name == item.name) { i.stackCount++; } });
+                    }
                 }
             }
         } 
@@ -91,8 +120,19 @@ public class Inventory : MonoBehaviour
         return items;
     }
 
-    public void SetItems(List<Item> ITEMS)
+    public void SetItems(List<Item> list)
     {
-        items = ITEMS;
+        items.Clear();
+
+        foreach (var i in list)
+        {
+            items.Add(i);
+        }
+
+        if (onItemChangedCallback != null)
+            onItemChangedCallback.Invoke();
     }
+
+
+
 }

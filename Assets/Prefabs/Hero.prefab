@@ -550,6 +550,7 @@ MonoBehaviour:
   firePoint: {fileID: 4698801924308537292}
   bulletPref: {fileID: 7649396526448525815, guid: 1b143023b05d0c740baf7459df4f11f6,
     type: 3}
+  heroHealth: {fileID: 0}
   bulletForce: 10
 --- !u!114 &4982795307004444838
 MonoBehaviour:

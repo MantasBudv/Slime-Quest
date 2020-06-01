@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Shooting : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
         if (!PlayerMovement.frozen)
         {
             if ((Input.GetButtonDown("Fire1")) && (Shapeshifting.CurrentForm == 0) && Time.time > NextFire)
