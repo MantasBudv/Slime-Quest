@@ -275,12 +275,12 @@ PrefabInstance:
     - target: {fileID: 4168437031276681251, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -67.40953
+      value: -65.761314
       objectReference: {fileID: 0}
     - target: {fileID: 4168437031276681251, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -36.355747
+      value: -36.358486
       objectReference: {fileID: 0}
     - target: {fileID: 6707961864257072297, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
@@ -639,22 +639,22 @@ PrefabInstance:
     - target: {fileID: 8470469577883986263, guid: 59c64b2a7fb4a024ba988f2cdbb254b5,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.0047712326
+      value: -0.0024442673
       objectReference: {fileID: 0}
     - target: {fileID: 8470469577883986263, guid: 59c64b2a7fb4a024ba988f2cdbb254b5,
         type: 3}
       propertyPath: m_Size.x
-      value: 1.3490181
+      value: 1.6520615
       objectReference: {fileID: 0}
     - target: {fileID: 8470469577883986263, guid: 59c64b2a7fb4a024ba988f2cdbb254b5,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.2705741
+      value: -0.29221916
       objectReference: {fileID: 0}
     - target: {fileID: 8470469577883986263, guid: 59c64b2a7fb4a024ba988f2cdbb254b5,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.5010309
+      value: 0.83293533
       objectReference: {fileID: 0}
     - target: {fileID: 8785679850108020479, guid: 59c64b2a7fb4a024ba988f2cdbb254b5,
         type: 3}
@@ -698,8 +698,8 @@ MonoBehaviour:
     sentences:
     - I wonder what made that splash?
     name: 
-    portrait: {fileID: 0}
-    hasPortrait: 0
+    portrait: {fileID: 21300000, guid: 59df4a6ef59e4e946b7b7ac47c3032d7, type: 3}
+    hasPortrait: 1
 --- !u!114 &8715306830298118815
 MonoBehaviour:
   m_ObjectHideFlags: 0

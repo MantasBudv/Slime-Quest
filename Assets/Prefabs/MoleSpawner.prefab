@@ -45,8 +45,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 422892876112896535, guid: 24397cd35e8c87e4491daf13246e1b64, type: 3}
   spawnPoint: {fileID: 0}
+  counter: 0
   maxCount: 1
   path1:
   - {fileID: 0}
   - {fileID: 0}
-  startTimeBtwSpawns: 1
+  startTimeBtwSpawns: 1.5

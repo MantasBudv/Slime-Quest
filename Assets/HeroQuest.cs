@@ -18,7 +18,7 @@ public class HeroQuest : MonoBehaviour
     public DialogueManager manager;
     void Update()
     {
-        if (PlayerInRange && Input.GetButtonDown("Interact"))
+        if ((PlayerInRangeWitch || PlayerInRangeGreenMan) && Input.GetButtonDown("Interact"))
         {
             Debug.Log(dialogBox.transform.position);
             if (manager.animator.GetBool("isopen"))

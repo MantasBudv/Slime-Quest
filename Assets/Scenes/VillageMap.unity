@@ -663,6 +663,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Green Man
       objectReference: {fileID: 0}
+    - target: {fileID: 2853844639236578900, guid: a7ce11222307f294ba69bccaf4fe1d09,
+        type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3060188815181075055, guid: a7ce11222307f294ba69bccaf4fe1d09,
         type: 3}
       propertyPath: m_Name
@@ -728,17 +733,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - sentences:
-    - take kvest
+    - Bring me my golden flower from the dungeon and I will forever be in your debt.
     name: Green Man
     portrait: {fileID: 0}
     hasPortrait: 0
   - sentences:
-    - go do
+    - Bring me my golden flower from the dungeon and I will forever be in your debt.
     name: Green Man
     portrait: {fileID: 0}
     hasPortrait: 0
   - sentences:
-    - good job
+    - Thank you! You have helped the village greatly!
     name: Green Man
     portrait: {fileID: 0}
     hasPortrait: 0
