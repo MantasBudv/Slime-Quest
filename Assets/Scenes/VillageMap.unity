@@ -230,6 +230,11 @@ PrefabInstance:
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 2111556162}
+    - target: {fileID: 3285535410773980371, guid: 30b09f2a0961e934397c1ffa24f6b31c,
+        type: 3}
+      propertyPath: trigger
+      value: 
+      objectReference: {fileID: 1682343642}
     - target: {fileID: 3668643219909802805, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -263,12 +268,12 @@ PrefabInstance:
     - target: {fileID: 4168437031276681251, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -40.062046
+      value: -42.52409
       objectReference: {fileID: 0}
     - target: {fileID: 4168437031276681251, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -43.315704
+      value: -43.314705
       objectReference: {fileID: 0}
     - target: {fileID: 6707961864257072297, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
@@ -699,8 +704,44 @@ PrefabInstance:
       propertyPath: dialogue.hasPortrait
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4805302943476206595, guid: a7ce11222307f294ba69bccaf4fe1d09, type: 3}
+    - {fileID: 7511626678031253565, guid: a7ce11222307f294ba69bccaf4fe1d09, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a7ce11222307f294ba69bccaf4fe1d09, type: 3}
+--- !u!1 &1682343641 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1657668532555030299, guid: a7ce11222307f294ba69bccaf4fe1d09,
+    type: 3}
+  m_PrefabInstance: {fileID: 1682343640}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1682343642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682343641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97cd25df1adfde843a1d907b25f33f8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - sentences:
+    - take kvest
+    name: Green Man
+    portrait: {fileID: 0}
+    hasPortrait: 0
+  - sentences:
+    - go do
+    name: Green Man
+    portrait: {fileID: 0}
+    hasPortrait: 0
+  - sentences:
+    - good job
+    name: Green Man
+    portrait: {fileID: 0}
+    hasPortrait: 0
 --- !u!60 &2111556162 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 2111556162, guid: 221717240d601bb4092e8564b26ca75d,

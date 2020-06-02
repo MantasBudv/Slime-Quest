@@ -776,7 +776,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400427857518765975}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -407.22852, y: -262.74243, z: -10}
+  m_LocalPosition: {x: -461.45352, y: -244.28802, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1454939790775461685}
@@ -1227,7 +1227,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questGiver: {fileID: 2883550609936494012}
-  dialogbox: {fileID: 318490433762067918}
+  dialogBox: {fileID: 318490433762067918}
+  trigger: {fileID: 0}
+  manager: {fileID: 5573391773175427356}
 --- !u!1 &4128526348327421075
 GameObject:
   m_ObjectHideFlags: 0
@@ -1947,12 +1949,12 @@ PrefabInstance:
     - target: {fileID: 1429089668805457433, guid: f6fe7f43954a409439308ed8b034a0e1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.619526
+      value: -57.84726
       objectReference: {fileID: 0}
     - target: {fileID: 1429089668805457433, guid: f6fe7f43954a409439308ed8b034a0e1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -63.675747
+      value: -41.431744
       objectReference: {fileID: 0}
     - target: {fileID: 1429089668805457433, guid: f6fe7f43954a409439308ed8b034a0e1,
         type: 3}

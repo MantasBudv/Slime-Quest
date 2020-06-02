@@ -13,11 +13,24 @@ public class HeroQuest : MonoBehaviour
     public static bool PlayerInRangeGreenMan;
     public static bool greenManQuestCompleted = false;
 
-    public GameObject dialogbox;
+    public GameObject dialogBox;
+    public QuestDialogueTrigger trigger;
+    public DialogueManager manager;
     void Update()
     {
         if (PlayerInRange && Input.GetButtonDown("Interact"))
         {
+            Debug.Log(dialogBox.transform.position);
+            if (manager.animator.GetBool("isopen"))
+            {
+                manager.DisplayNextSentence();
+            }
+            else
+            {
+                trigger.TriggerDialogue();
+
+            }
+
             if (Quest.isActive)
             {
                 if ((PlayerInRangeWitch && !witchQuestCompleted) || (PlayerInRangeGreenMan && !greenManQuestCompleted))
@@ -49,7 +62,8 @@ public class HeroQuest : MonoBehaviour
                 if ((PlayerInRangeWitch && !witchQuestCompleted) || (PlayerInRangeGreenMan && !greenManQuestCompleted))
                 {
                     //if (dialogbox.GetComponent<Animator>().GetBool("isopen"))
-                    new WaitUntil(() => dialogbox.GetComponent<Animator>().GetBool("isopen"));
+                    //new WaitUntil(() => dialogbox.GetComponent<Animator>().GetBool("isopen"));
+                    
                     questGiver.AcceptQuest();
                 }
             }
@@ -71,6 +85,7 @@ public class HeroQuest : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         PlayerInRange = false;
+        manager.EndDialogue();
         if (collision.collider.CompareTag("Witch"))
         {
             PlayerInRangeWitch = false;
