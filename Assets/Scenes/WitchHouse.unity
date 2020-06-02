@@ -362,6 +362,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8832535720525004060, guid: 4df4803bc72fdee48afc43018e5aa926,
+        type: 3}
+      propertyPath: dialogue.Array.data[0].sentences.Array.data[0]
+      value: Greetings traveller! Can you please get rid of those pesky animals outside?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832535720525004060, guid: 4df4803bc72fdee48afc43018e5aa926,
+        type: 3}
+      propertyPath: dialogue.Array.data[1].sentences.Array.data[0]
+      value: Did you do it yet? Please.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832535720525004060, guid: 4df4803bc72fdee48afc43018e5aa926,
+        type: 3}
+      propertyPath: dialogue.Array.data[2].sentences.Array.data[0]
+      value: Thank you very much! I can live peacefully now.
+      objectReference: {fileID: 0}
     - target: {fileID: 8987150586830996499, guid: 4df4803bc72fdee48afc43018e5aa926,
         type: 3}
       propertyPath: m_Name

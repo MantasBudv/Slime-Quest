@@ -26,6 +26,11 @@ public class HeroHealth : MonoBehaviour
     public GameObject HP;
 
     public GameObject map, inv, quests, trans; //UIs
+    public GameObject dialogBox;
+    public DialogueTrigger trigger;
+    public DialogueManager dialogueManager;
+    static bool startDialogue = false;
+    static bool ended = false;
 
     void Start()
     {
@@ -41,6 +46,20 @@ public class HeroHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if ((!SaveManager.hasLoaded) && (!startDialogue))
+        {
+            trigger.TriggerDialogue();
+            startDialogue = true;
+        }
+        if (Input.GetButtonDown("Interact") && (startDialogue) && (!ended))
+        {
+            if (dialogueManager.animator.GetBool("isopen"))
+            {
+                dialogueManager.DisplayNextSentence();
+            }
+            ended = true;
+        }
+
         if ((touching) && (Time.time > NextDamage))
         {
             NextDamage = Time.time + DamageRate;
