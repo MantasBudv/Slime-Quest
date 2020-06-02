@@ -1853,6 +1853,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -63.675747
       objectReference: {fileID: 0}
+    - target: {fileID: 5975917554151365396, guid: 30b09f2a0961e934397c1ffa24f6b31c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6707961864257072297, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -1902,6 +1907,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083727599292138037, guid: 30b09f2a0961e934397c1ffa24f6b31c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7953920126916502318, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
