@@ -302,6 +302,11 @@ PrefabInstance:
       propertyPath: dialogBox
       value: 
       objectReference: {fileID: 603093848}
+    - target: {fileID: 7034415598722450496, guid: 4df4803bc72fdee48afc43018e5aa926,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7133841136924089809, guid: 4df4803bc72fdee48afc43018e5aa926,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -382,6 +387,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d280a58168692f244868145da2927812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1055094439 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8832535720525004060, guid: 4df4803bc72fdee48afc43018e5aa926,
+    type: 3}
+  m_PrefabInstance: {fileID: 351411945}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97cd25df1adfde843a1d907b25f33f8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1269703665
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -414,6 +431,11 @@ PrefabInstance:
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 1620584701}
+    - target: {fileID: 3285535410773980371, guid: 30b09f2a0961e934397c1ffa24f6b31c,
+        type: 3}
+      propertyPath: trigger
+      value: 
+      objectReference: {fileID: 1055094439}
     - target: {fileID: 3668643219909802805, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
       propertyPath: m_AnchorMin.y

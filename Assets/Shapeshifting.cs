@@ -21,11 +21,20 @@ public class Shapeshifting : MonoBehaviour
     Color SlimePink = new Color(255, 0, 77, 255);
     Color Default = new Color(255, 255, 255, 255);
 
+
+    float[] slimeOff = new float[] { 0, 0, 0.83f, 0.71f };
+    float[] wolfOff = new float[] { 0, -0.328f, 0.71f, 0.552f };
+    float[] moleOff = new float[] { 0, -0.368f, 0.8f, 0.56f };
+    List<float[]> offset = new List<float[]>();
+
     private void Start()
     {
         Animator = GetComponent<Animator>();
         Renderer = GetComponent<SpriteRenderer>();
         Transformations[0] = true;
+        offset.Add(slimeOff);
+        offset.Add(moleOff);
+        offset.Add(wolfOff);
     }
 
 
@@ -35,37 +44,32 @@ public class Shapeshifting : MonoBehaviour
         if ((!newScene.Equals(SceneManager.GetActiveScene())) || (SaveManager.hasLoaded))
         {
             newScene = SceneManager.GetActiveScene();
-            if (CurrentForm != 0)
-            {
-                Animator.SetInteger("Form", CurrentForm);
-                Renderer.color = SlimePink;
-                gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
-                gameObject.GetComponent<BoxCollider2D>().enabled = true;
-            }
-            else
-            {
-                gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
-                gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            }
+            Shapeshift(CurrentForm, offset[CurrentForm]);
 
         }
 
-        if ((Input.GetKeyDown(KeyCode.O)) && (Time.time > NextTrans)) 
+        if ((Input.GetButtonDown("Trans1")) && (Time.time > NextTrans))
         {
             NextTrans = Time.time + TransRate;
-            Shapeshift(1);
+            Shapeshift(0, offset[0]);
 
         }
-        if ((Input.GetKeyDown(KeyCode.Y)) && (Time.time > NextTrans))
+        if ((Input.GetButtonDown("Trans2")) && (Time.time > NextTrans)) 
+        {
+            NextTrans = Time.time + TransRate;
+            Shapeshift(1, offset[1]);
+
+        }
+        if ((Input.GetButtonDown("Trans3")) && (Time.time > NextTrans))
         {
             NextTrans = Time.time + TransRate;
 
-            Shapeshift(2);
+            Shapeshift(2, offset[2]);
 
         }
     }
 
-    public void Shapeshift(int form)
+    public void Shapeshift(int form, float[] offset)
     {
         if (Transformations[form])
         {
@@ -73,21 +77,13 @@ public class Shapeshifting : MonoBehaviour
             {
                 Animator.SetInteger("Form", form);
                 CurrentForm = form;
-                Renderer.color = SlimePink;
-                //cap collider offset/size array
-                gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
-                gameObject.GetComponent<BoxCollider2D>().enabled = true;
+                if (form != 0)
+                    Renderer.color = SlimePink;
+                else Renderer.color = Default;
+                gameObject.GetComponent<CapsuleCollider2D>().offset = new Vector2(offset[0], offset[1]);
+                gameObject.GetComponent<CapsuleCollider2D>().size = new Vector2(offset[2], offset[3]);
                 if (form == 2)
                     PlayerMovement.moveSpeed = 8f;
-            }
-            else
-            {
-                Animator.SetInteger("Form", 0);
-                CurrentForm = 0;
-                Renderer.color = Default;
-                gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
-                gameObject.GetComponent<BoxCollider2D>().enabled = false;
-                PlayerMovement.moveSpeed = 6f;
             }
         }
     }
