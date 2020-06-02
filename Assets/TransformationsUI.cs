@@ -11,6 +11,7 @@ public class TransformationsUI : MonoBehaviour
 
     void Start()
     {
+
         UI.SetActive(true);
         Transformatios = itemsParent.GetComponentsInChildren<ActiveTransformationTab>();
     }
