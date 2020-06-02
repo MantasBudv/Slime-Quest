@@ -24,6 +24,9 @@ public class HeroHealth : MonoBehaviour
     private static Scene newScene;
 
     public GameObject HP;
+
+    public GameObject map, inv, quests, trans; //UIs
+
     void Start()
     {
         Time.timeScale = 1f;
@@ -93,6 +96,10 @@ public class HeroHealth : MonoBehaviour
     {
         OverText.SetActive(true);
         RestartButton.SetActive(true);
+        map.SetActive(false);
+        inv.SetActive(false);
+        quests.SetActive(false);
+        trans.SetActive(false);
         Time.timeScale = 0f;
         PlayerMovement.frozen = true;
         currentHealth = maxHealth;

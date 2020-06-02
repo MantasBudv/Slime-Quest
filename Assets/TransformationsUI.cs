@@ -7,9 +7,11 @@ public class TransformationsUI : MonoBehaviour
     public Transform itemsParent;
     public static ActiveTransformationTab[] Transformatios;
     public static bool[] activeTransformations;
+    public GameObject UI;
 
     void Start()
     {
+        UI.SetActive(true);
         Transformatios = itemsParent.GetComponentsInChildren<ActiveTransformationTab>();
     }
     void Update()
