@@ -15,6 +15,9 @@ public class HeroHealth : MonoBehaviour
 
     public float KnockDur;
     public float KnockPwr;
+    bool touching = false;
+    float DamageRate = 0.5f;
+    float NextDamage;
 
     public HealthBar healthBar;
 
@@ -35,6 +38,13 @@ public class HeroHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if ((touching) && (Time.time > NextDamage))
+        {
+            NextDamage = Time.time + DamageRate;
+            TakeDamage();
+
+        }
+
         if (healthBar.slider.maxValue != maxHealth)
         {
             healthBar.slider.maxValue = maxHealth; // this line doesnt heal to full hp
@@ -92,9 +102,15 @@ public class HeroHealth : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Enemy"))
         {
-            TakeDamage();
+            //TakeDamage();
+            touching = true;
             StartCoroutine(Knockback(KnockDur, KnockPwr,  rb.transform.position - collision.transform.position ));
         }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        touching = false;
     }
 
 
