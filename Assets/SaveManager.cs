@@ -95,8 +95,10 @@ public class SaveManager : MonoBehaviour
         instance.activeSave.questF = Quest.isFinished;                          //Finished quest
         instance.activeSave.questAmount = QuestGoal.currentAmount;              //Quest kills
         instance.activeSave.currScene = SceneManager.GetActiveScene().name;     //Current Scene
-        //instance.activeSave.Wcount = ws.stackCount;                             //wolf shard count
-        //instance.activeSave.Mcount = ms.stackCount;
+        instance.activeSave.complete = CompletionUI.completed;                  //game completed
+        instance.activeSave.questFetch = QuestGoal.currentItem;
+        instance.activeSave.WC = HeroQuest.witchQuestCompleted;
+        instance.activeSave.GMC = HeroQuest.greenManQuestCompleted;
 
 
         string dataPath = Application.persistentDataPath;
@@ -225,6 +227,10 @@ public class SaveManager : MonoBehaviour
             Shapeshifting.Transformations = instance.activeSave.transformations;        //Aquired Transformations
             SpaghettiLoad();                                                            //Shards 'spagetis' (pataisyti)
             Inventory.instance.SetItems(instance.activeSave.inventory);
+            CompletionUI.completed = instance.activeSave.complete;                      //game completed
+            QuestGoal.currentItem = instance.activeSave.questFetch;
+            HeroQuest.witchQuestCompleted = instance.activeSave.WC;
+            HeroQuest.greenManQuestCompleted = instance.activeSave.GMC;
         }
     }
 
@@ -244,11 +250,12 @@ public class SaveData
     public string currScene;
     public bool questA, questF;
     public int questAmount;
+    public string questFetch;
     //quest
     //volume
     public int currHP, maxHP;
     public List<Item> inventory;
-    public int Wcount;
-    public int Mcount;
+    public bool complete;
+    public bool WC, GMC;
 
 }
