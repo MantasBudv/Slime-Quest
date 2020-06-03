@@ -99,6 +99,7 @@ public class SaveManager : MonoBehaviour
         instance.activeSave.questFetch = QuestGoal.currentItem;
         instance.activeSave.WC = HeroQuest.witchQuestCompleted;
         instance.activeSave.GMC = HeroQuest.greenManQuestCompleted;
+        instance.activeSave.Qind = QuestGiver.questIndex;
 
 
         string dataPath = Application.persistentDataPath;
@@ -231,6 +232,7 @@ public class SaveManager : MonoBehaviour
             QuestGoal.currentItem = instance.activeSave.questFetch;
             HeroQuest.witchQuestCompleted = instance.activeSave.WC;
             HeroQuest.greenManQuestCompleted = instance.activeSave.GMC;
+            QuestGiver.questIndex = instance.activeSave.Qind;
         }
     }
 
@@ -257,5 +259,6 @@ public class SaveData
     public List<Item> inventory;
     public bool complete;
     public bool WC, GMC;
+    public int Qind;
 
 }
