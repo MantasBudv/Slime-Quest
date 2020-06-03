@@ -11,7 +11,7 @@ public class QuestGiver : MonoBehaviour
     public Text titleText;
     public Text descriptionText;
     public Text counterText;
-    private static int questIndex = 0;
+    public static int questIndex = 0;
 
     public void Start()
     {
