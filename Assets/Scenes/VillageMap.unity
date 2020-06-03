@@ -268,12 +268,42 @@ PrefabInstance:
     - target: {fileID: 4168437031276681251, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -42.52409
+      value: -40.062046
       objectReference: {fileID: 0}
     - target: {fileID: 4168437031276681251, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -43.314705
+      value: -43.315704
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430061779778060695, guid: 30b09f2a0961e934397c1ffa24f6b31c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 35.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430061779778060695, guid: 30b09f2a0961e934397c1ffa24f6b31c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 230.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430061779778060695, guid: 30b09f2a0961e934397c1ffa24f6b31c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 65.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430061779778060695, guid: 30b09f2a0961e934397c1ffa24f6b31c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 494.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430061779778060695, guid: 30b09f2a0961e934397c1ffa24f6b31c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430061779778060695, guid: 30b09f2a0961e934397c1ffa24f6b31c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6707961864257072297, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
@@ -305,6 +335,12 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6712249897570413178, guid: 30b09f2a0961e934397c1ffa24f6b31c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 19c669fcd807eed45bef6a0041460d9e,
+        type: 3}
     - target: {fileID: 7302934015124953493, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -314,6 +350,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -246.17203
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518797882265325406, guid: 30b09f2a0961e934397c1ffa24f6b31c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8226216768573811518, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
@@ -735,18 +776,18 @@ MonoBehaviour:
   - sentences:
     - Bring me my golden flower from the dungeon and I will forever be in your debt.
     name: Green Man
-    portrait: {fileID: 0}
-    hasPortrait: 0
+    portrait: {fileID: 21300000, guid: 19c669fcd807eed45bef6a0041460d9e, type: 3}
+    hasPortrait: 1
   - sentences:
     - Bring me my golden flower from the dungeon and I will forever be in your debt.
     name: Green Man
-    portrait: {fileID: 0}
-    hasPortrait: 0
+    portrait: {fileID: 21300000, guid: 19c669fcd807eed45bef6a0041460d9e, type: 3}
+    hasPortrait: 1
   - sentences:
     - Thank you! You have helped the village greatly!
     name: Green Man
-    portrait: {fileID: 0}
-    hasPortrait: 0
+    portrait: {fileID: 21300000, guid: 19c669fcd807eed45bef6a0041460d9e, type: 3}
+    hasPortrait: 1
 --- !u!60 &2111556162 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 2111556162, guid: 221717240d601bb4092e8564b26ca75d,
@@ -818,6 +859,11 @@ PrefabInstance:
     - target: {fileID: 3595599624923453006, guid: 221717240d601bb4092e8564b26ca75d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7409610790393571703, guid: 221717240d601bb4092e8564b26ca75d,
+        type: 3}
+      propertyPath: m_AnimatedTiles.Array.size
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
