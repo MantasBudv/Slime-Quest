@@ -23,7 +23,7 @@ public class QuestGiver : MonoBehaviour
     }
     public void AcceptQuest()
     {
-        if (!Quest.isActive)
+        if (!Quest.isActive && questIndex < 2)
         {
             Quest.UpdateQuest(QuestsStorage.titles[questIndex], QuestsStorage.descriptions[questIndex], QuestsStorage.types[questIndex], QuestsStorage.itemsToFetch[questIndex]);
             titleText.text = Quest.title;
@@ -69,6 +69,7 @@ public class QuestGiver : MonoBehaviour
                 counterText.text = QuestGoal.currentAmount + " / " + QuestGoal.requiredAmount;
             else if (Quest.questType == "Fetch")
             {
+                counterText.text = "";
                 Inventory.instance.GetItems().ForEach((i) => { if (i.name.Equals(QuestGoal.requiredItem)) QuestGoal.currentItem = i.name; } );
                 if (QuestGoal.isItemCollected())
                 {
@@ -99,6 +100,10 @@ public class Quest
     {
         isActive = false;
         isFinished = true;
+        if (Quest.questType == "Fetch")
+        {
+            Inventory.instance.GetItems().ForEach((i) => { if (i.name.Equals(QuestGoal.currentItem)) Inventory.instance.Remove(i); });
+        }
     }
     public static void UpdateQuest(string titleNew, string descriptionNew, string typeNew, string requiredItemNew)
     {
