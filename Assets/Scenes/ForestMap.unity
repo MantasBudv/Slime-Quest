@@ -773,6 +773,11 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 1183947686}
+    - target: {fileID: 124165568612136480, guid: 0b6cb681fd6fccb4c9eadd3f6b901044,
+        type: 3}
+      propertyPath: m_AnimatedTiles.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 127345298282305427, guid: 0b6cb681fd6fccb4c9eadd3f6b901044,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -852,6 +857,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 12.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675226046950470392, guid: 0b6cb681fd6fccb4c9eadd3f6b901044,
+        type: 3}
+      propertyPath: m_AnimatedTiles.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9052064866979042469, guid: 0b6cb681fd6fccb4c9eadd3f6b901044,
         type: 3}
@@ -942,7 +952,7 @@ MonoBehaviour:
     sentences:
     - Where am I? I wonder what's in that house.
     name: Slime McSlimenson
-    portrait: {fileID: 21300000, guid: 59df4a6ef59e4e946b7b7ac47c3032d7, type: 3}
+    portrait: {fileID: 21300000, guid: 3159f7f12b0c24c4b8e7bf6875f83a41, type: 3}
     hasPortrait: 1
 --- !u!114 &1183947686 stripped
 MonoBehaviour:
@@ -1452,6 +1462,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -262.74243
       objectReference: {fileID: 0}
+    - target: {fileID: 729336532692232996, guid: 30b09f2a0961e934397c1ffa24f6b31c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 1014220989205267339, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1887,10 +1902,30 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -63.675747
       objectReference: {fileID: 0}
+    - target: {fileID: 4168437031276681251, guid: 30b09f2a0961e934397c1ffa24f6b31c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 5975917554151365396, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430061779778060695, guid: 30b09f2a0961e934397c1ffa24f6b31c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430061779778060695, guid: 30b09f2a0961e934397c1ffa24f6b31c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 88
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430061779778060695, guid: 30b09f2a0961e934397c1ffa24f6b31c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 230
       objectReference: {fileID: 0}
     - target: {fileID: 6707961864257072297, guid: 30b09f2a0961e934397c1ffa24f6b31c,
         type: 3}
