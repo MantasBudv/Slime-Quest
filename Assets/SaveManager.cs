@@ -195,7 +195,7 @@ public class SaveManager : MonoBehaviour
             HeroHealth.currentHealth = instance.activeSave.currHP;                      //Current Health (known bug: issaugoti sliderio reikšmę)
             Shapeshifting.CurrentForm = instance.activeSave.currForm;                   //Current Form
                                                                                         //Inventory.instance.LoadItems(instance.activeSave.inventory);                //Inventory
-            Quest.isActive = instance.activeSave.questA;                                //Active quest
+            //Quest.isActive = instance.activeSave.questA;                                //Active quest
             Quest.isFinished = instance.activeSave.questF;                              //Finished quest
             QuestGoal.currentAmount = instance.activeSave.questAmount;                  //Quest kills
             player.transform.position = instance.activeSave.respawnPosition;            //Possition
@@ -209,6 +209,11 @@ public class SaveManager : MonoBehaviour
             HeroQuest.greenManQuestCompleted = instance.activeSave.GMC;
             QuestGiver.questIndex = instance.activeSave.Qind;
             HeroHealth.startDialogue = instance.activeSave.startDialogue;
+
+            if (instance.activeSave.questA == true)
+            {
+                QuestGiver.instance.AcceptQuest();
+            }
         }
     }
 

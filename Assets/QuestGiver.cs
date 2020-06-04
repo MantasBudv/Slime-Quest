@@ -8,6 +8,19 @@ using UnityEngine.UI;
 
 public class QuestGiver : MonoBehaviour
 {
+
+    public static QuestGiver instance;
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogWarning("More than one instance of inventory is found!");
+            return;
+        }
+        instance = this;
+    }
+
     public Text titleText;
     public Text descriptionText;
     public Text counterText;
