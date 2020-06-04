@@ -11,7 +11,7 @@ public class ItemPickup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("picking up " + item.name);
+            Debug.Log("picking up " + item.itemname);
             if (!item.isUsed)
             Inventory.instance.Add(item);
             

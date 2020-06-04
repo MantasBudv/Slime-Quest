@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcdd1ef138166d04eb88ebf98faf6746, type: 3}
   m_Name: WolfShard
   m_EditorClassIdentifier: 
-  name: WolfShard
+  itemname: WolfShard
   isStackable: 1
-  stackCount: 0
+  stackCount: 1
   maxStack: 3
-  isUsed: 1
+  isUsed: 0

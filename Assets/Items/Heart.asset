@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67e0202fd9d3fdb40a6e68308f39c10c, type: 3}
   m_Name: Heart
   m_EditorClassIdentifier: 
-  name: Heart
+  itemname: Heart
   isStackable: 0
   stackCount: 0
   maxStack: 0

@@ -13,7 +13,7 @@ public class WolfShard : Item
     public override void Use()
     {
 
-        Debug.Log(name + " " + stackCount + " " + maxStack);
+        Debug.Log(itemname + " " + stackCount + " " + maxStack);
         if (stackCount == maxStack)
         {
             if (Shapeshifting.Transformations[2] != true && isUsed == false)

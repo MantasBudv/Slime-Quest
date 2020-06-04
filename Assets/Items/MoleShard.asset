@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17d9fc5541b0cbf49abc19b570745989, type: 3}
   m_Name: MoleShard
   m_EditorClassIdentifier: 
-  name: MoleShard
+  itemname: MoleShard
   isStackable: 1
   stackCount: 0
   maxStack: 3

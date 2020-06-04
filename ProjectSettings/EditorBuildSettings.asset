@@ -5,33 +5,27 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 7b528657a7136f84198686baed8556aa
-  - enabled: 0
-    path: Assets/Scenes/DemoMap.unity
-    guid: a3289d6e25f941a489625dd00bb5eb77
   - enabled: 1
     path: Assets/Scenes/ForestMap.unity
     guid: e00615f110cf5cc4e99d987e7e08b0aa
   - enabled: 1
-    path: Assets/Scenes/CaveMap.unity
-    guid: 20920aa5da3e597479d8ff198192d836
+    path: Assets/Scenes/WitchHouse.unity
+    guid: 5069a5ebec3bd924cbe2219e5d2664b4
   - enabled: 1
     path: Assets/Scenes/VillageMap.unity
     guid: 8986532081fa28c42a3da5dd0b443941
+  - enabled: 1
+    path: Assets/Scenes/CaveMap.unity
+    guid: 20920aa5da3e597479d8ff198192d836
   - enabled: 1
     path: Assets/Scenes/CaveMap2.unity
     guid: 1c50301aa291f92478bab4536279c492
   - enabled: 1
     path: Assets/Scenes/CaveMap3.unity
     guid: dc33b3f0994369a468ac7fc2b61ca8b6
-  - enabled: 1
-    path: Assets/Scenes/WitchHouse.unity
-    guid: 5069a5ebec3bd924cbe2219e5d2664b4
   - enabled: 1
     path: Assets/Scenes/CaveMap4.unity
     guid: 9ddaf04becc09cd41b5d5354c2600261

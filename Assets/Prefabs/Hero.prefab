@@ -583,6 +583,7 @@ GameObject:
   - component: {fileID: 696169443}
   - component: {fileID: 696169444}
   - component: {fileID: 1528787686006157075}
+  - component: {fileID: 8324448742392826334}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Player
@@ -746,6 +747,12 @@ MonoBehaviour:
   healthBar: {fileID: 1281352423}
   HP: {fileID: 1831432120}
   map: {fileID: 0}
+  inv: {fileID: 0}
+  quests: {fileID: 0}
+  trans: {fileID: 0}
+  dialogBox: {fileID: 0}
+  trigger: {fileID: 8324448742392826334}
+  dialogueManager: {fileID: 0}
 --- !u!114 &696169444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -770,6 +777,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d442338034853364ca5fc19db42a30d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8324448742392826334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5061009830845507828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f19d40e5e8b324fbbd12ddacdc7c58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    sentences:
+    - Where am I? I wonder what's in that house.
+    name: Slime McSlimenson
+    portrait: {fileID: 21300000, guid: 3159f7f12b0c24c4b8e7bf6875f83a41, type: 3}
+    hasPortrait: 1
 --- !u!1 &6245496223851093313
 GameObject:
   m_ObjectHideFlags: 0

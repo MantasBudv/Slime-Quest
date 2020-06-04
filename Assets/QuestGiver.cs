@@ -70,7 +70,7 @@ public class QuestGiver : MonoBehaviour
             else if (Quest.questType == "Fetch")
             {
                 counterText.text = "";
-                Inventory.instance.GetItems().ForEach((i) => { if (i.name.Equals(QuestGoal.requiredItem)) QuestGoal.currentItem = i.name; } );
+                Inventory.instance.GetItems().ForEach((i) => { if (i.itemname.Equals(QuestGoal.requiredItem)) QuestGoal.currentItem = i.itemname; } );
                 if (QuestGoal.isItemCollected())
                 {
                     Quest.description = QuestsStorage.afterItemDescription[questIndex];
@@ -102,7 +102,7 @@ public class Quest
         isFinished = true;
         if (Quest.questType == "Fetch")
         {
-            Inventory.instance.GetItems().ForEach((i) => { if (i.name.Equals(QuestGoal.currentItem)) Inventory.instance.Remove(i); });
+            Inventory.instance.GetItems().ForEach((i) => { if (i.itemname.Equals(QuestGoal.currentItem)) Inventory.instance.Remove(i); });
         }
     }
     public static void UpdateQuest(string titleNew, string descriptionNew, string typeNew, string requiredItemNew)
