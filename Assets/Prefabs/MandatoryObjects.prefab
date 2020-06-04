@@ -749,9 +749,11 @@ MonoBehaviour:
     complete: 0
     WC: 0
     GMC: 0
+    Qind: 0
   player: {fileID: 4079101217638608648}
   loadingScreen: {fileID: 709438581717146136}
   slider: {fileID: 7494288177108709243}
+  text: {fileID: 0}
 --- !u!1 &1189851717096328041
 GameObject:
   m_ObjectHideFlags: 0

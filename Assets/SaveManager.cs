@@ -78,7 +78,6 @@ public class SaveManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.N))
         {
-            Debug.Log("pressed N");
             DeleteSaveData();
         }
     }
@@ -100,6 +99,7 @@ public class SaveManager : MonoBehaviour
         instance.activeSave.WC = HeroQuest.witchQuestCompleted;
         instance.activeSave.GMC = HeroQuest.greenManQuestCompleted;
         instance.activeSave.Qind = QuestGiver.questIndex;
+        instance.activeSave.startDialogue = HeroHealth.startDialogue;
 
 
         string dataPath = Application.persistentDataPath;
@@ -108,11 +108,6 @@ public class SaveManager : MonoBehaviour
         var stream = new FileStream(dataPath + "/" + activeSave.saveName + ".save", FileMode.Create);
         serializer.Serialize(stream, activeSave);
         stream.Close();
-
-        //Inventory
-        //SaveInventory();
-        //
-
 
 
         Debug.Log("Saved");
@@ -135,27 +130,6 @@ public class SaveManager : MonoBehaviour
             hasLoaded = true;
 
             StartCoroutine(LoadScene(instance.activeSave.currScene));
-
-            //if (SceneManager.GetActiveScene().name != instance.activeSave.currScene)    //Current scene
-            //    StartCoroutine(LoadScene(instance.activeSave.currScene));
-
-
-            //    HeroHealth.maxHealth = instance.activeSave.maxHP;                           //Max Health
-            //    HeroHealth.currentHealth = instance.activeSave.currHP;                      //Current Health (known bug: issaugoti sliderio reikšmę)
-            //    Shapeshifting.CurrentForm = instance.activeSave.currForm;                   //Current Form
-            //    //Inventory.instance.LoadItems(instance.activeSave.inventory);                //Inventory
-            //    Quest.isActive = instance.activeSave.questA;                                //Active quest
-            //    Quest.isFinished = instance.activeSave.questF;                              //Finished quest
-            //    QuestGoal.currentAmount = instance.activeSave.questAmount;                  //Quest kills
-            //    player.transform.position = instance.activeSave.respawnPosition;            //Possition
-            //    Shapeshifting.Transformations = instance.activeSave.transformations;        //Aquired Transformations
-            //    SpaghettiLoad();                                                            //Shards 'spagetis' (pataisyti)
-            //    Inventory.instance.SetItems(instance.activeSave.inventory);
-
-
-            //inventory
-            //LoadInventory();
-            //
 
 
         }
@@ -227,12 +201,14 @@ public class SaveManager : MonoBehaviour
             player.transform.position = instance.activeSave.respawnPosition;            //Possition
             Shapeshifting.Transformations = instance.activeSave.transformations;        //Aquired Transformations
             SpaghettiLoad();                                                            //Shards 'spagetis' (pataisyti)
-            Inventory.instance.SetItems(instance.activeSave.inventory);
+            if(instance.activeSave.inventory.Any())
+               Inventory.instance.SetItems(instance.activeSave.inventory);
             CompletionUI.completed = instance.activeSave.complete;                      //game completed
             QuestGoal.currentItem = instance.activeSave.questFetch;
             HeroQuest.witchQuestCompleted = instance.activeSave.WC;
             HeroQuest.greenManQuestCompleted = instance.activeSave.GMC;
             QuestGiver.questIndex = instance.activeSave.Qind;
+            HeroHealth.startDialogue = instance.activeSave.startDialogue;
         }
     }
 
@@ -260,5 +236,6 @@ public class SaveData
     public bool complete;
     public bool WC, GMC;
     public int Qind;
+    public bool startDialogue;
 
 }

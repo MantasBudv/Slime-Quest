@@ -1462,30 +1462,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 636504417}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &727443905 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4079101217638608648, guid: 30b09f2a0961e934397c1ffa24f6b31c,
-    type: 3}
-  m_PrefabInstance: {fileID: 9126458135806874138}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &727443918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 727443905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76f19d40e5e8b324fbbd12ddacdc7c58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    sentences:
-    - Where am I? I wonder what's in that house.
-    name: Slime McSlimenson
-    portrait: {fileID: 21300000, guid: 3159f7f12b0c24c4b8e7bf6875f83a41, type: 3}
-    hasPortrait: 1
 --- !u!1 &939219674
 GameObject:
   m_ObjectHideFlags: 0
@@ -3212,11 +3188,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 40
       objectReference: {fileID: 0}
-    - target: {fileID: 9126458137061536799, guid: 30b09f2a0961e934397c1ffa24f6b31c,
-        type: 3}
-      propertyPath: trigger
-      value: 
-      objectReference: {fileID: 727443918}
     m_RemovedComponents:
     - {fileID: 4104116757242313483, guid: 30b09f2a0961e934397c1ffa24f6b31c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 30b09f2a0961e934397c1ffa24f6b31c, type: 3}

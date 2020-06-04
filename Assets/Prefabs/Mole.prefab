@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.93725497, g: 0.058823533, b: 0.11764707, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.037703037, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -168,13 +168,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d1abc8e9af7347419b5edeaeb179bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 4
+  maxHealth: 3
   currentHealth: 0
   transformInd: 1
   rb: {fileID: 6109613385319997763}
   healthBar: {fileID: 6836084324973842547}
   GooPref: {fileID: 5285809548647855306, guid: 4c9d40a39b26f154db21746c6de950bb, type: 3}
   AIscript: {fileID: 1273293034471067320}
+  spawner: {fileID: 0}
   HP: {fileID: 2714086191343880151}
 --- !u!114 &1273293034471067320
 MonoBehaviour:
@@ -358,9 +359,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 5
+  m_MaxValue: 2
   m_WholeNumbers: 1
-  m_Value: 5
+  m_Value: 2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

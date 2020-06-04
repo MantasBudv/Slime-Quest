@@ -14,11 +14,16 @@ public class Spawner : MonoBehaviour
     public float startTimeBtwSpawns;
     private float timeBtwSpawns;
 
+    public bool DontSpawn;
+
     void Start()
     {
-        counter = 0;
-        Spawn();
-        RestartTimer();
+        if (!DontSpawn)
+        {
+            counter = 0;
+            Spawn();
+            RestartTimer();
+        }
     }
 
     void Update()
@@ -30,8 +35,11 @@ public class Spawner : MonoBehaviour
             //mole.GetComponent<Mole>().path[1] = path1[1];
             //Debug.Log("Spawned");
             //counter++;
-            Spawn();
-            RestartTimer();
+            if (!DontSpawn)
+            {
+                Spawn();
+                RestartTimer();
+            }
         }
         else
         {

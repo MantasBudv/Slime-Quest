@@ -10,7 +10,7 @@ using UnityEngine;
 [XmlInclude(typeof(MoleShard))]
 public class Item : ScriptableObject
 {
-    new public string name = "New Item";
+    new public string itemname = "New Item";
 
     public bool isStackable = false;
     public int stackCount = 0;
@@ -21,11 +21,11 @@ public class Item : ScriptableObject
     // it was virtual
     public virtual void Use()
     {
-        if (name == "Heart")
+        if (itemname == "Heart")
         {
             HeroHealth.maxHealth += 1;
             Inventory.instance.Remove(this);
         }
-        Debug.Log("Using " + name);
+        Debug.Log("Using " + itemname);
     }
 }

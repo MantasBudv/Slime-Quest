@@ -15,7 +15,7 @@ public class InventorySlot : MonoBehaviour
     public void AddItem (Item newItem)
     {
         item = newItem;
-        tempSprite = Resources.Load<Sprite>("ItemSprites/" + item.name);
+        tempSprite = Resources.Load<Sprite>("ItemSprites/" + item.itemname);
         icon.sprite = tempSprite;
         icon.enabled = true;
 

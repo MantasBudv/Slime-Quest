@@ -49,7 +49,7 @@ public class Inventory : MonoBehaviour
         if (item.isStackable)
         {
             bool isNew = true;
-            items.ForEach(i => { if (i.name == item.name) isNew = false; });
+            items.ForEach(i => { if (i.itemname == item.itemname) isNew = false; });
 
             if (isNew)
             {
@@ -66,7 +66,7 @@ public class Inventory : MonoBehaviour
                 }
                 else
                 {
-                    items.ForEach(i => { if (i.name == item.name) { i.stackCount++; } });
+                    items.ForEach(i => { if (i.itemname == item.itemname) { i.stackCount++; } });
                 }
             }
             else                            //stupid code for when the items are loaded in
@@ -75,7 +75,7 @@ public class Inventory : MonoBehaviour
                 int maxstack = 3;
                 foreach (var j in items)
                 {
-                    if (item.name == j.name)
+                    if (item.itemname == j.itemname)
                     {
                         stack = j.stackCount;
                         maxstack = j.maxStack;
@@ -92,7 +92,7 @@ public class Inventory : MonoBehaviour
                     }
                     else
                     {
-                        items.ForEach(i => { if (i.name == item.name) { i.stackCount++; } });
+                        items.ForEach(i => { if (i.itemname == item.itemname) { i.stackCount++; } });
                     }
                 }
             }

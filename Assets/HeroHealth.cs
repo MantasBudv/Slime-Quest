@@ -29,7 +29,7 @@ public class HeroHealth : MonoBehaviour
     public GameObject dialogBox;
     public DialogueTrigger trigger;
     public DialogueManager dialogueManager;
-    static bool startDialogue = false;
+    public static bool startDialogue = false;
     static bool ended = false;
 
     void Start()
